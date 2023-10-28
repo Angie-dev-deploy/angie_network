@@ -33,7 +33,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 import acceuPhoto from "@/assets/images/partners/acceu.png";
 import babesPhoto from "@/assets/images/partners/babes.png";
@@ -67,6 +67,23 @@ const scroll = (direction: string) => {
     }
   }
 };
+// ANIMATIE SCROLL AUTOMAT
+// let currentImageIndex = ref(0);
+// let intervalId = null;
+
+// const startAutoScroll = () => {
+//   intervalId = setInterval(() => {
+//     scroll("right");
+//   }, 3000); // Adjust the interval duration as needed (3000 milliseconds = 3 seconds)
+// };
+
+// const stopAutoScroll = () => {
+//   clearInterval(intervalId);
+// };
+
+// onMounted(() => {
+//   startAutoScroll();
+// });
 </script>
 
 <style lang="scss" scoped>
