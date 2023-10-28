@@ -32,33 +32,40 @@
   </div>
 </template>
 
-<script>
-import ucvPhoto from "../assets/images/partners/ucv.png";
-import acceuPhoto from "../assets/images/partners/acceu.png";
-import bariPhoto from "../assets/images/partners/bari.png";
-import babesPhoto from "../assets/images/partners/babes.png";
+<script lang="ts" setup>
+import { ref } from "vue";
 
-export default {
-  data() {
-    return {
-      galleryImages: [ucvPhoto, acceuPhoto, bariPhoto, babesPhoto],
-      scrollRef: null,
-    };
-  },
-  mounted() {
-    this.scrollRef = this.$refs.scrollRef;
-  },
-  methods: {
-    scroll(direction) {
-      if (this.scrollRef) {
-        if (direction === "left") {
-          this.scrollRef.scrollLeft -= 300;
-        } else {
-          this.scrollRef.scrollLeft += 300;
-        }
-      }
-    },
-  },
+import acceuPhoto from "@/assets/images/partners/acceu.png";
+import babesPhoto from "@/assets/images/partners/babes.png";
+import bariPhoto from "@/assets/images/partners/bari.png";
+import fhooPhoto from "@/assets/images/partners/fhoo.png";
+import lisboaPhoto from "@/assets/images/partners/lisboa.png";
+import ljublianaPhoto from "@/assets/images/partners/ljubliana.png";
+import malagaPhoto from "@/assets/images/partners/malaga.png";
+import ucvPhoto from "@/assets/images/partners/ucv.png";
+import unizaPhoto from "@/assets/images/partners/UNIZA.png";
+
+const galleryImages = ref([
+  ucvPhoto,
+  acceuPhoto,
+  bariPhoto,
+  babesPhoto,
+  fhooPhoto,
+  lisboaPhoto,
+  ljublianaPhoto,
+  malagaPhoto,
+  unizaPhoto,
+]);
+const scrollRef = ref<HTMLElement | null>(null);
+
+const scroll = (direction: string) => {
+  if (scrollRef.value) {
+    if (direction === "left") {
+      scrollRef.value.scrollLeft -= 301;
+    } else {
+      scrollRef.value.scrollLeft += 301;
+    }
+  }
 };
 </script>
 
@@ -69,10 +76,11 @@ export default {
   align-items: center;
 }
 .app__gallery {
+  display: flex;
   flex-direction: row;
 
-  background: var(--color-black);
-  padding: 4rem 0 4rem 6rem;
+  background: #52616c;
+  padding: 4rem 0rem 4rem 6rem;
 }
 
 .app__gallery-content {
@@ -91,10 +99,10 @@ export default {
 }
 
 .app__gallery-images {
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: row;
-  max-width: 50%;
+  max-width: 70%;
   position: relative;
 }
 
@@ -105,6 +113,8 @@ export default {
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-behavior: smooth; /* Add smooth scroll behavior */
+  scroll-snap-type: x mandatory; /* Add snap-type for horizontal scrolling */
 }
 
 .app__gallery-images_container::-webkit-scrollbar {
@@ -116,6 +126,8 @@ export default {
   min-width: 301px;
   height: 447px;
   margin-right: 2rem;
+  scroll-snap-align: start;
+  //scroll-snap-align: end;
 }
 
 .gallery__image-icon {
@@ -155,15 +167,16 @@ export default {
 }
 
 .gallery__arrow-icon {
-  color: var(--color-golden);
-  font-size: 2rem;
+  color: #3ab54a;
+  font-size: 4rem;
   cursor: pointer;
-  background-color: var(--color-black);
-  border-radius: 5px;
+  opacity: 0.8;
+  transition: color 0.1s ease-in-out, opacity 0.1s ease-in-out; /* Apply timing functions */
 }
 
 .gallery__arrow-icon:hover {
-  color: var(--color-white);
+  color: #006837;
+  opacity: 1;
 }
 
 @media screen and (min-width: 2000px) {
@@ -185,6 +198,7 @@ export default {
 @media screen and (max-width: 1150px) {
   .app__gallery {
     flex-direction: column;
+    padding: 4rem 4rem 4rem 4rem;
   }
 
   .app__gallery-images {
@@ -195,13 +209,13 @@ export default {
 
 @media screen and (max-width: 850px) {
   .app__gallery {
-    padding: 4rem 0 4rem 4rem;
+    padding: 4rem 4rem 4rem 4rem;
   }
 }
 
 @media screen and (max-width: 650px) {
   .app__gallery {
-    padding: 4rem 0 4rem 2rem;
+    padding: 4rem 2rem 4rem 2rem;
   }
 
   .app__gallery-content {
