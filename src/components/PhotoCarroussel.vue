@@ -1,9 +1,9 @@
 <template>
   <div class="app__gallery flex__center">
     <div class="app__gallery-content">
-      <h1>CAPITOL POZE</h1>
-      <h1 class="headtext__cormorant">Photo Gallery</h1>
-      <p class="p__opensans" style="color: #aaaaaa; margin-top: 2rem">
+      <h1 class="h-text">CAPITOL POZE</h1>
+      <h1 class="h-text">Photo Gallery</h1>
+      <p class="p-text" style="color: #aaaaaa; margin-top: 2rem">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis
         ipsum turpis elit elit scelerisque egestas mu.
       </p>
@@ -17,7 +17,11 @@
           :key="'gallery_image-' + (index + 1)"
         >
           <img :src="image" alt="gallery_image" />
-          <v-icon class="gallery__image-icon">mdi-information</v-icon>
+          <p class="gallery__image-icon">
+            Descriere pt fiec imagine in parte maybe (am nevoie de ajutot, sa se
+            updateze cumva cu indexul imaginii)
+          </p>
+          <!-- <v-icon class="gallery__image-icon">mdi-information</v-icon> -->
         </div>
       </div>
       <div class="app__gallery-images_arrows">
@@ -87,6 +91,12 @@ const scroll = (direction: string) => {
 </script>
 
 <style lang="scss" scoped>
+.h-text {
+  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .flex__center {
   display: flex;
   justify-content: center;
