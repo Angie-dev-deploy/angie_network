@@ -106,7 +106,7 @@ const scroll = (direction: string) => {
   display: flex;
   flex-direction: row;
 
-  background: #52616c;
+  background: #e2dcde;
   padding: 4rem 0rem 4rem 6rem;
 }
 
