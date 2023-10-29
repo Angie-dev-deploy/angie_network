@@ -29,7 +29,7 @@
         max-height="200"
         max-width="200"
       ></v-img>
-      <v-card-title class="card-title">
+      <v-card-title class="card-title mt-8">
         {{ title }}
       </v-card-title>
     </div>

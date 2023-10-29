@@ -7,6 +7,8 @@
         :src="partner.logo"
         max-width="120px"
         max-height="120px"
+        min-width="120px"
+        class="my-4"
       ></v-img>
     </div>
   </v-container>
@@ -76,5 +78,6 @@ const partners = [
 .partners {
   width: 100%;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 </style>
