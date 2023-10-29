@@ -1,7 +1,6 @@
 <template>
   <div class="app__gallery flex__center">
     <div class="app__gallery-content">
-      <h1 class="h-text">CAPITOL POZE</h1>
       <h1 class="h-text">Photo Gallery</h1>
       <p class="p-text" style="color: #aaaaaa; margin-top: 2rem">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis

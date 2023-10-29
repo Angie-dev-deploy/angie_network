@@ -1,5 +1,5 @@
 <template>
-  <v-img alt="photo" src="../assets/images/angie.png">
+  <v-img alt="photo" :src="selectedImage">
     <div class="project-subheading">
       <span
         >Academic Network for a <br />
@@ -13,8 +13,8 @@
       <v-img
         src="../assets/images/erasmus.png"
         alt="Erasmus"
-        max-height="50px"
-      /><span>2023-1-RO01-KA220-HED-000158031</span>
+        class="image"
+      /><span class="text">2023-1-RO01-KA220-HED-000158031</span>
     </div>
   </v-img>
   <HomePagePartnersSection />
@@ -24,6 +24,25 @@
 <script lang="ts" setup>
 import HomePagePartnersSection from "../components/HomePagePartnersSection.vue";
 import PhotoCarroussel from "../components/PhotoCarroussel.vue";
+import angiePhoto from "../assets/images/angie.png";
+import angieMobilePhoto from "../assets/images/angie_mobile.png";
+import { ref } from "vue";
+import { watch } from "vue";
+
+const selectedImage = ref(
+  window.innerWidth >= 1200 ? angiePhoto : angieMobilePhoto
+);
+
+watch(
+  () => window.innerWidth,
+  (width) => {
+    if (width >= 1200) {
+      selectedImage.value = angiePhoto;
+    } else {
+      selectedImage.value = angieMobilePhoto;
+    }
+  }
+);
 </script>
 
 <style lang="scss" scoped>
@@ -36,6 +55,16 @@ import PhotoCarroussel from "../components/PhotoCarroussel.vue";
   padding: 5px;
   font-size: 16px;
   border-radius: 0 55% 0 0;
+
+  .image {
+    max-height: 10vh !important;
+    max-width: 20vw !important;
+  }
+
+  .text {
+    display: block;
+    font-size: 2vw !important;
+  }
 }
 
 .project-subheading {

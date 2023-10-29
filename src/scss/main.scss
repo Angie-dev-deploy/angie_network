@@ -9,3 +9,45 @@
         font-weight: 300 !important;
     }
 }
+
+@media screen and (max-width: 1800px) {
+    .project-heading {
+        font-size: 3rem !important;
+        font-weight: 300 !important;
+    }
+
+    .project-subheading {
+        font-size: 2rem !important;
+        font-weight: 300 !important;
+}
+    
+}
+
+@media screen and (max-width: 1200px) {
+    .project-heading {
+        font-size: 4vw !important;
+        font-weight: 300 !important;
+        left: 10vw !important;
+    }
+
+    .project-subheading {
+        font-size: 3vw !important;
+        font-weight: 300 !important;
+        right: 5vw !important;
+    }
+
+    .navbar-desktop {
+        display: none !important;
+    }
+
+    .transparent-toolbar {
+        background-color: transparent;
+        backdrop-filter: blur(20px) !important;
+      }
+}
+
+@media screen and (min-width: 1201px) {
+    .navbar-mobile {
+        display: none !important;
+    }
+}
