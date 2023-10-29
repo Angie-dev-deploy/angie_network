@@ -1,17 +1,42 @@
 <template>
-  <div class="bg">
-    <v-card class="card">
-      <div class="img-title">
-        <v-img :src="imageUrl" class="card-image" max-height="200"></v-img>
-        <v-card-title class="card-title">
-          {{ title }}
-        </v-card-title>
-      </div>
-      <v-card-text class="card-description">
-        {{ description }}
-      </v-card-text>
-    </v-card>
-  </div>
+  <v-card class="card d-flex flex-column">
+    <v-dialog width="500">
+      <template v-slot:activator="{ props }">
+        <v-icon class="info-btn" color="black" v-bind="props">
+          mdi-information-outline</v-icon
+        >
+      </template>
+
+      <template v-slot:default="{ isActive }">
+        <v-card :title="title">
+          <v-card-text> <span v-html="description"></span> </v-card-text>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+
+            <v-btn text="Close Dialog" @click="isActive.value = false"></v-btn>
+          </v-card-actions>
+        </v-card>
+      </template>
+    </v-dialog>
+
+    <div class="circle" style="right: 40px; background-color: #2a940a"></div>
+    <div class="circle" style="right: 70px; background-color: #3ab54a"></div>
+    <div class="img-title">
+      <v-img
+        :src="imageUrl"
+        class="card-image ml-8 mt-8"
+        max-height="200"
+        max-width="200"
+      ></v-img>
+      <v-card-title class="card-title">
+        {{ title }}
+      </v-card-title>
+    </div>
+    <span class="card-info ml-8 mb-4 align-end">
+      Contact person: {{ contactPerson }}</span
+    >
+  </v-card>
 </template>
 
 <script lang="ts" setup>
@@ -30,24 +55,32 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  contactPerson: {
+    type: String,
+    required: true,
+  },
 });
 </script>
 
 <style scoped>
 /* Your component's styles */
 
-.bg {
-  background: #e2dcde;
-}
 .card {
   width: 600px; /* Adjust the width as needed */
   height: 300px; /* Adjust the height as needed */
-  margin: 10px; /* Add margins for spacing between cards */
+  margin-top: 10px; /* Add margins for spacing between cards */
+  margin-bottom: 10px;
   background: linear-gradient(71deg, #b5bebf, #c9c9c9, #b5bebf);
-  border-radius: 25px;
-  background-color: transparent;
-  backdrop-filter: blur(0);
-  box-shadow: none;
+
+  border-radius: 12px;
+  border: 1px solid transparent; /* Set the border width */
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, #006837, #3ab54a, #006837);
+  border-image-slice: 1;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .img-title {
@@ -59,17 +92,36 @@ const props = defineProps({
 .card-image {
   flex: 1;
   object-fit: cover;
-  margin: 10px 0 0 10px;
 }
 
 .card-title {
   flex: 2;
   font-weight: bold;
-  text-wrap: wrap;
+  white-space: normal;
   text-align: right;
 }
 
-.card-description {
+.card-info {
   color: #555;
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px; /* Create a circle by setting border-radius to 50% */
+  position: absolute;
+  top: 12px;
+}
+
+.info-btn {
+  position: absolute;
+  font-size: 25px !important;
+  right: 10px;
+  top: 10px;
+  color: #fff;
+  font-size: 30px;
 }
 </style>

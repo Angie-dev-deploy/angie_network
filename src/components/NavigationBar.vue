@@ -11,9 +11,9 @@
         ></v-img>
         <v-toolbar-title class="navbar--title">ANGIE</v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-btn class="navbar--button">HOME</v-btn>
+        <v-btn class="navbar--button" to="/">HOME</v-btn>
         <v-btn class="navbar--button">ABOUT</v-btn>
-        <v-btn class="navbar--button">CONTACT</v-btn>
+        <v-btn class="navbar--button" to="/partners">PARTNERS</v-btn>
       </v-row>
     </v-container>
   </v-app-bar>
