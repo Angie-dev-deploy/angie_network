@@ -18,36 +18,12 @@
     </div>
   </v-img>
   <HomePagePartnersSection />
-  <v-container>
-    <h1>blah</h1>
-    <p>Lorem ipsum dolor sit amet</p>
-    <h1>Content</h1>
-    <p>Lorem ipsum dolor sit amet</p>
-    <h1>Continut</h1>
-    <p>Lorem ipsum dolor sit amet</p>
-    <h1>blah</h1>
-    <p>Lorem ipsum dolor sit amet</p>
-    <h1>Content</h1>
-    <p>Lorem ipsum dolor sit amet</p>
-    <h1>Continut</h1>
-    <p>Lorem ipsum dolor sit amet</p>
-    <h1>blah</h1>
-    <p>Lorem ipsum dolor sit amet</p>
-    <h1>Content</h1>
-    <p>Lorem ipsum dolor sit amet</p>
-    <h1>Continut</h1>
-    <p>Lorem ipsum dolor sit amet</p>
-    <h1>blah</h1>
-    <p>Lorem ipsum dolor sit amet</p>
-    <h1>Content</h1>
-    <p>Lorem ipsum dolor sit amet</p>
-    <h1>Continut</h1>
-    <p>Lorem ipsum dolor sit amet</p>
-  </v-container>
+  <PhotoCarroussel />
 </template>
 
 <script lang="ts" setup>
 import HomePagePartnersSection from "../components/HomePagePartnersSection.vue";
+import PhotoCarroussel from "../components/PhotoCarroussel.vue";
 </script>
 
 <style lang="scss" scoped>
