@@ -10,27 +10,28 @@
   </v-card>
 </template>
 
-<script>
-export default {
-  props: {
-    imageUrl: String,
-    title: String,
-    description: String,
+<script lang="ts" setup>
+import { defineProps } from "vue";
+
+const props = defineProps({
+  imageUrl: {
+    type: String,
+    required: true, // You can provide a default value here
   },
-};
+  title: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+});
 </script>
 
-<!-- <script lang="ts" setup>
-import { ref, defineProps } from "vue";
-
-const { imageUrl, title, description } = defineProps<{
-  imageUrl: string;
-  title: string;
-  description: string;
-}>();
-</script> -->
-
 <style scoped>
+/* Your component's styles */
+
 .card {
   width: 300px; /* Adjust the width as needed */
   margin: 10px; /* Add margins for spacing between cards */
