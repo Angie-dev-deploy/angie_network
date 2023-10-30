@@ -9,13 +9,13 @@
       <div class="footer__container-element">
         <h3>Follow Us</h3>
         <div class="icons">
-          <a href="https://www.facebook.com/">
+          <a href="https://www.facebook.com/" target="_blank">
             <v-icon>mdi-facebook</v-icon>
           </a>
-          <a href="https://www.instagram.com/">
+          <a href="https://www.instagram.com/" target="_blank">
             <v-icon>mdi-instagram</v-icon>
           </a>
-          <a href="https://www.linkedin.com/">
+          <a href="https://www.linkedin.com/" target="_blank">
             <v-icon>mdi-linkedin</v-icon>
           </a>
         </div>
