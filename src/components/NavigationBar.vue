@@ -14,6 +14,7 @@
 
         <div class="d-flex navbar-desktop">
           <v-btn class="navbar--button" to="/">HOME</v-btn>
+          <v-btn class="navbar--button" to="/news">NEWS</v-btn>
           <v-btn class="navbar--button">ABOUT</v-btn>
           <v-btn class="navbar--button" to="/partners">PARTNERS</v-btn>
         </div>
@@ -47,6 +48,13 @@
                       to="/"
                       @click="isActive.value = false"
                       >HOME</v-btn
+                    >
+                    <v-btn
+                      color="transparent"
+                      :elevation="0"
+                      to="/news"
+                      @click="isActive.value = false"
+                      >NEWS</v-btn
                     >
                     <v-btn
                       color="transparent"
