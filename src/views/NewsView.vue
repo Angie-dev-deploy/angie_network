@@ -1,17 +1,19 @@
 <template>
-  <div>
+  <div class="news-list bg">
+    <h1 class="title">WHAT IS NEW?</h1>
+    <v-divider
+      :thickness="4"
+      color="#3AB54A"
+      class="mx-12 border-opacity-100 my-12"
+    ></v-divider>
     <NewsComponent
       v-for="(news, index) in article"
       :key="index"
-      :image-url="news.imageUrl"
+      :image-url_1="news.imageUrl_1"
+      :image-url_2="news.imageUrl_2"
       :title="news.title"
       :text="news.text"
     />
-    <!-- <news-component
-      title="Sample Article"
-      imageUrl="https://example.com/sample-image.jpg"
-      text="This is a sample news article."
-    ></news-component> -->
   </div>
 </template>
 
@@ -21,14 +23,35 @@ import constants from "@/shared/constants";
 
 const article = [
   {
-    imageUrl: constants.news.article_1.photo,
+    imageUrl_1: constants.news.article_1.photo_1,
+    imageUrl_2: constants.news.article_1.photo_2,
     title: constants.news.article_1.title,
     text: constants.news.article_1.text,
   },
   {
-    imageUrl: constants.news.article_2.photo,
+    imageUrl_1: constants.news.article_1.photo_1,
+    imageUrl_2: constants.news.article_1.photo_2,
     title: constants.news.article_2.title,
     text: constants.news.article_2.text,
   },
 ];
 </script>
+
+<style scoped>
+.title {
+  color: #006837;
+  font-size: 60px;
+  text-align: center;
+}
+
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 4rem;
+}
+
+.bg {
+  background: #e2dcde;
+}
+</style>
