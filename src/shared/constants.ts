@@ -110,6 +110,27 @@ const constants = {
       contactPerson: "Paul Anderson",
     },
   },
+
+  news: {
+    article_1: {
+      title: "Angie Network",
+      photo: require("@/assets/images/partners/acceu.png"),
+      text: `<p>An affiliate of ENQA and a full-fledged member of INQAAHE, ACEEU is an international quality assurance body dedicated to advancing higher education by supporting universities in their transformation process towards becoming more entrepreneurial and engaged. With the ultimate goal of fostering the creation of greater social, economic and cultural impacts by universities, ACEEU accredits universities around the world in its two main accreditation programmes: Entrepreneurial University Accreditation and Engaged University Accreditation. Having successfully accredited institutions in Europe, Latin America, Asia and Australia, with 20+ more institutions in the process, the Council is currently designing a departmental level accreditation, as well as a program level accreditation on 21st Century Skills.</p>
+            <br/>
+            <p>Aiming to create a pathway towards recognised excellence in entrepreneurship and engagement for universities, ACEEU's activities are clustered around three main steps: (1) promoting, (2) evaluating, and (3) celebrating excellence.<p/>
+            <br/>
+            <p>Founded in 2016 as part of the University Industry Innovation Network (UIIN) in Amsterdam, the Netherlands, ACEEU spun out of UIIN in 2019 to form an independent organization and moved its headquarters to Muenster in Germany.<p/>`,
+    },
+    article_2: {
+      title: "Angie Network",
+      photo: require("@/assets/images/partners/babes.png"),
+      text: `<p>An affiliate of ENQA and a full-fledged member of INQAAHE, ACEEU is an international quality assurance body dedicated to advancing higher education by supporting universities in their transformation process towards becoming more entrepreneurial and engaged. With the ultimate goal of fostering the creation of greater social, economic and cultural impacts by universities, ACEEU accredits universities around the world in its two main accreditation programmes: Entrepreneurial University Accreditation and Engaged University Accreditation. Having successfully accredited institutions in Europe, Latin America, Asia and Australia, with 20+ more institutions in the process, the Council is currently designing a departmental level accreditation, as well as a program level accreditation on 21st Century Skills.</p>
+              <br/>
+              <p>Aiming to create a pathway towards recognised excellence in entrepreneurship and engagement for universities, ACEEU's activities are clustered around three main steps: (1) promoting, (2) evaluating, and (3) celebrating excellence.<p/>
+              <br/>
+              <p>Founded in 2016 as part of the University Industry Innovation Network (UIIN) in Amsterdam, the Netherlands, ACEEU spun out of UIIN in 2019 to form an independent organization and moved its headquarters to Muenster in Germany.<p/>`,
+    },
+  },
 };
 
 export default constants;
