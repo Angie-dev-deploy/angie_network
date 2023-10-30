@@ -9,9 +9,15 @@
       <div class="footer__container-element">
         <h3>Follow Us</h3>
         <div class="icons">
-          <v-icon>mdi-facebook</v-icon>
-          <v-icon>mdi-instagram</v-icon>
-          <v-icon>mdi-linkedin</v-icon>
+          <a href="https://www.facebook.com/">
+            <v-icon>mdi-facebook</v-icon>
+          </a>
+          <a href="https://www.instagram.com/">
+            <v-icon>mdi-instagram</v-icon>
+          </a>
+          <a href="https://www.linkedin.com/">
+            <v-icon>mdi-linkedin</v-icon>
+          </a>
         </div>
       </div>
       <div class="footer__container-element">
@@ -63,13 +69,19 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
 
 .ivyLeft {
   position: absolute;
-  bottom: 15rem;
+  bottom: 12vw;
+  //width: 16vw;
+  width: 300px;
+  //bottom: 15rem;
   z-index: 0;
 }
 
 .ivyRight {
   position: absolute;
-  bottom: 10rem;
+  //bottom: 10rem;
+  bottom: 8vw;
+  //width: 24vw;
+  width: 450px;
   right: 0;
   z-index: 0;
 }
@@ -77,7 +89,7 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
 .footer {
   position: absolute;
   bottom: 0;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -89,7 +101,7 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
   justify-content: space-evenly;
   align-items: center;
   padding: 2rem 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .footer__container-element {
@@ -98,12 +110,14 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
   align-items: center;
   .logo {
     width: 100%;
-    max-width: 15vw;
+    //max-width: 15vw;
+    max-width: 300px;
   }
 }
 
 .footer__container-element h3 {
   color: #e2dcde;
+  -webkit-text-stroke: 0.5px black;
   font-size: 45px;
   font-style: normal;
   font-weight: 600;
@@ -113,6 +127,7 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
 
 .footer__container-element p {
   color: #e2dcde;
+  -webkit-text-stroke: 0.5px black;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -129,17 +144,24 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
   justify-content: space-evenly;
   font-size: 25px;
   color: #e2dcde;
+  // -webkit-text-stroke: 0.5px black;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-  .footer {
-    flex-direction: column; /* Stack elements vertically on smaller screens */
-  }
+a {
+  text-decoration: none; /* Remove the underline */
+  color: inherit; /* Inherit the text color from the parent element */
+}
 
+@media screen and (max-width: 940px) {
   .footer__container {
     flex-direction: column; /* Stack elements vertically on smaller screens */
+    padding: 0;
   }
 
+  .footer__container-element {
+    margin-bottom: 2rem;
+  }
   .footer__container-element h3 {
     font-size: 28px; /* Adjust the font size for smaller screens */
   }
@@ -154,6 +176,13 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
 
   .icons {
     font-size: 20px; /* Adjust the icon size for smaller screens */
+  }
+  .ivyLeft {
+    width: 200px;
+  }
+
+  .ivyRight {
+    width: 300px;
   }
 }
 </style>
