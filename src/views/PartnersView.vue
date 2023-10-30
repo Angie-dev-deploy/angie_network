@@ -83,6 +83,7 @@ const cards = [
 .title {
   color: #006837;
   font-size: 60px;
+  text-align: center;
 }
 
 .card-list {
