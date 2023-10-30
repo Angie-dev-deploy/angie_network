@@ -1,25 +1,41 @@
 <template>
-  <v-card class="news-article">
-    <v-img :src="imageUrl" class="news-image" aspect-ratio="1.5"></v-img>
-    <v-card-title class="news-title">{{ title }}</v-card-title>
-    <v-card-text class="news-text">{{ text }}</v-card-text>
-  </v-card>
+  <div class="news-article">
+    <v-row>
+      <v-col cols="12" md="6">
+        <v-card-title class="news-title">{{ title }}</v-card-title>
+        <v-card-text class="news-text"><span v-html="text"></span></v-card-text>
+        <v-img :src="imageUrl" class="news-image" aspect-ratio="1.5"></v-img>
+      </v-col>
+      <v-col cols="12" md="6" class="news-text-container">
+        <v-img :src="imageUrl" class="news-image" aspect-ratio="1.5"></v-img>
+        <v-card-text class="news-text"><span v-html="text"></span></v-card-text>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { ref, defineProps } from "vue";
+import { defineProps } from "vue";
 
 const props = defineProps({
-  title: String,
-  imageUrl: String,
-  text: String,
+  title: {
+    type: String,
+    required: true,
+  },
+  imageUrl: {
+    type: String,
+    required: true,
+  },
+  text: {
+    type: String,
+    required: true,
+  },
 });
 </script>
 
 <style scoped>
 .news-article {
-  max-width: 300px;
-  margin: 16px;
+  margin: 80px;
 }
 
 .news-image {
