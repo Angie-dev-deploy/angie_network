@@ -1,5 +1,20 @@
 const constants = {
   universities: {
+    ucv: {
+      name: "University of Craiova",
+      photo: require("@/assets/images/partners/ucv.png"),
+      url: "https://www.ucv.ro/en/",
+      description: `<p>University of Craiova is a Romanian prestigious institution of higher education, part of the European academic community, sharing cultural values, moral, educational and scientific aspects of it.</p>
+        <br/>
+        <p>Since its founding, in 1947, University of Craiova has undertaken the mission to contribute to the development of knowledge, science and national culture, their integration into the universal patrimony.</p>
+        <br/>
+        <p>Acceptance of competition and participation in the exchange of values allowed build-up of a valuable teaching staff, competent trainer and generous scientific and cultural elites, currently consisting of over 1,000 teachers.</p>
+        <br/>
+        <p>Throughout its existence, the University of Craiova has evolved into a complex structure, which now includes 12 Faculties and 2 independent Departments. The educational offer includes 47 license areas, with 85 study programs, and 42 master's programs with 84 study programs. The offer continues with Doctoral Schools for each faculty, preparing more than 200 PhD students. </p>
+        <br/>
+        <p>University of Craiova provide to all of its over 20,000 students excellent education at all levels. University of Craiova has appropriate expertise in steel structures, organizing specific Bachelor study programs related to civil engineering, mechanical engineering, welding engineering as well as material science.</p>`,
+      contactPerson: "George Smith",
+    },
     acceu: {
       name: "Accreditation Council for Entrepreneurial and Engaged Universities",
       photo: require("@/assets/images/partners/acceu.png"),
@@ -10,30 +25,6 @@ const constants = {
       <br/>
       <p>Founded in 2016 as part of the University Industry Innovation Network (UIIN) in Amsterdam, the Netherlands, ACEEU spun out of UIIN in 2019 to form an independent organization and moved its headquarters to Muenster in Germany.<p/>`,
       contactPerson: "John Doe",
-    },
-    babes: {
-      name: "Babes-Bolyai University",
-      photo: require("@/assets/images/partners/babes.png"),
-      url: "https://www.ubbcluj.ro/en/",
-      description: `<p>Babes Bolyai University is a dynamic, but also traditional institution, with deep roots in Central Europe and strong international academic ties. Its origins date back to 1581, which makes it the oldest institution of higher education in Romania. It was named after two prominent Transylvanian scientists: the Romanian biologist Victor Babes and the Hungarian mathematician Janos Bolyai. <p/>
-      <br/>
-      <p>Located in Transylvania, a European province with a complex history, UBB is the crowning achievement of a long series of attempts to establish here a higher education institution. Thus, the University’s international recognition is materialized in different forms of collaboration and joint scientific programmes with other well-renowned universities from all around the world (Leipzig Univ., Germany; Corvinus Univ., Hungary; Univ. of „La Sapienza”, Italy, Paris XII, France, Michigan State Univ., USA; Dongguk Univ., Korea).<p/>
-      <br/>
-      <p>It is the largest Romanian university (approximately 45.000 students and 1.700 faculty staff), situated at the confluence of the Eastern and Western cultures. As an academic public institution, its aim is to promote and sustain the development of specific cultural components within the local, regional, national and international community. It provides a wide range of internationally competitive BA, MA and Ph.D. programmes in English, French or Italian<p/>`,
-      contactPerson: "Jane Smith",
-    },
-    bari: {
-      name: "Politecnico di Bari",
-      photo: require("@/assets/images/partners/bari.png"),
-      url: "https://www.uniba.it/",
-      description: `<p>Politecnico di Bari is a prestigious public university located in the city of Bari, in the southern region of Puglia, Italy. The university was founded in 1990 and has since become one of the leading technical universities in Italy.</p>
-      <br/>
-      <p>The Politecnico di Bari offers undergraduate and graduate programs in engineering, architecture, design, and industrial chemistry. It has a strong emphasis on research, innovation, and technology transfer, collaborating with companies, research centers, and international institutions to promote scientific and technological progress.<p/>
-      <br/>
-      <p>The university campus is modern and well-equipped, with state-of-the-art facilities, including libraries, laboratories, computer rooms, and sports facilities. The campus is located in a convenient area, close to the city center, with good transportation links to the rest of the city.<p/>
-      <br/>
-      <p>Politecnico di Bari is known for its high-quality education, prestigious faculty, and excellent career prospects for its graduates. It has a strong international orientation, welcoming students from all over the world, and offering exchange programs, internships, and joint research projects with universities abroad. Overall, Politecnico di Bari is an excellent choice for students seeking a world-class technical education in a dynamic and welcoming environment.</p>`,
-      contactPerson: "John Smith",
     },
     lisboa: {
       name: "Universidade de Lisboa",
@@ -61,32 +52,6 @@ const constants = {
       <p>The University of Ljubljana has close ties with Slovenian companies and foreign enterprises. Our partners include multinational corporations and the most successful Slovenian companies. As we are fully aware of the importance of knowledge and skills in obtaining our own financial sources, we are increasingly developing our market-oriented activities every year.</p>`,
       contactPerson: "Mark Johnson",
     },
-    malaga: {
-      name: "Universidad de Malaga",
-      photo: require("@/assets/images/partners/malaga.png"),
-      url: "https://www.uma.es/",
-      description: `<p>The University of Malaga (UMA) is one of Spain's premiere institutions of higher education (world ranking Webometrics: 424) [2021]. Since its foundation back in 1972, UMA has rapidly expanded its international presence and prestige.</p>
-      <br/>
-      <p>Currently, UMA has 2 campuses (1.797.247 m2), +35,700 students, +2,500 professors, +1900 administrative staff, 23 faculties and schools, 82 departments, 200 educational programmes (incl. 68 undergraduate, 74 master and 22 PhD programmes), 309 research groups, research projects (425 national / 150 EU) and +1,800 business contacts. Regarding international relations, UMA has bilateral agreements with +945 universities from all over the world with +1,500 incoming and +1,100 outgoing exchange students per year and +100 incoming and +200 outgoing exchange staff per year. UMA participates actively in international, national and regional as well as privately-funded programmes, all of them managed by the Office of International Relations and Cooperation. UMA is member of +100 networks and associations.<p/>
-      <br/>
-      <p>UMA stimulates educational innovation and research by boosting the quality of its professors and research groups through their participation in international research projects -managed by Research Results Transference Office (OTRI) - with the support and sponsorship of enterprises from local TechPark (PTA).</p>`,
-      contactPerson: "Ana Rodriguez",
-    },
-    ucv: {
-      name: "University of Craiova",
-      photo: require("@/assets/images/partners/ucv.png"),
-      url: "https://www.ucv.ro/en/",
-      description: `<p>University of Craiova is a Romanian prestigious institution of higher education, part of the European academic community, sharing cultural values, moral, educational and scientific aspects of it.</p>
-        <br/>
-        <p>Since its founding, in 1947, University of Craiova has undertaken the mission to contribute to the development of knowledge, science and national culture, their integration into the universal patrimony.</p>
-        <br/>
-        <p>Acceptance of competition and participation in the exchange of values allowed build-up of a valuable teaching staff, competent trainer and generous scientific and cultural elites, currently consisting of over 1,000 teachers.</p>
-        <br/>
-        <p>Throughout its existence, the University of Craiova has evolved into a complex structure, which now includes 12 Faculties and 2 independent Departments. The educational offer includes 47 license areas, with 85 study programs, and 42 master's programs with 84 study programs. The offer continues with Doctoral Schools for each faculty, preparing more than 200 PhD students. </p>
-        <br/>
-        <p>University of Craiova provide to all of its over 20,000 students excellent education at all levels. University of Craiova has appropriate expertise in steel structures, organizing specific Bachelor study programs related to civil engineering, mechanical engineering, welding engineering as well as material science.</p>`,
-      contactPerson: "George Smith",
-    },
     uniza: {
       name: "Zilinska Univerzita v Ziline",
       photo: require("@/assets/images/partners/UNIZA.png"),
@@ -98,6 +63,30 @@ const constants = {
       </p>`,
       contactPerson: "Eva Brown",
     },
+    bari: {
+      name: "Politecnico di Bari",
+      photo: require("@/assets/images/partners/bari.png"),
+      url: "https://www.uniba.it/",
+      description: `<p>Politecnico di Bari is a prestigious public university located in the city of Bari, in the southern region of Puglia, Italy. The university was founded in 1990 and has since become one of the leading technical universities in Italy.</p>
+      <br/>
+      <p>The Politecnico di Bari offers undergraduate and graduate programs in engineering, architecture, design, and industrial chemistry. It has a strong emphasis on research, innovation, and technology transfer, collaborating with companies, research centers, and international institutions to promote scientific and technological progress.<p/>
+      <br/>
+      <p>The university campus is modern and well-equipped, with state-of-the-art facilities, including libraries, laboratories, computer rooms, and sports facilities. The campus is located in a convenient area, close to the city center, with good transportation links to the rest of the city.<p/>
+      <br/>
+      <p>Politecnico di Bari is known for its high-quality education, prestigious faculty, and excellent career prospects for its graduates. It has a strong international orientation, welcoming students from all over the world, and offering exchange programs, internships, and joint research projects with universities abroad. Overall, Politecnico di Bari is an excellent choice for students seeking a world-class technical education in a dynamic and welcoming environment.</p>`,
+      contactPerson: "John Smith",
+    },
+    malaga: {
+      name: "Universidad de Malaga",
+      photo: require("@/assets/images/partners/malaga.png"),
+      url: "https://www.uma.es/",
+      description: `<p>The University of Malaga (UMA) is one of Spain's premiere institutions of higher education (world ranking Webometrics: 424) [2021]. Since its foundation back in 1972, UMA has rapidly expanded its international presence and prestige.</p>
+      <br/>
+      <p>Currently, UMA has 2 campuses (1.797.247 m2), +35,700 students, +2,500 professors, +1900 administrative staff, 23 faculties and schools, 82 departments, 200 educational programmes (incl. 68 undergraduate, 74 master and 22 PhD programmes), 309 research groups, research projects (425 national / 150 EU) and +1,800 business contacts. Regarding international relations, UMA has bilateral agreements with +945 universities from all over the world with +1,500 incoming and +1,100 outgoing exchange students per year and +100 incoming and +200 outgoing exchange staff per year. UMA participates actively in international, national and regional as well as privately-funded programmes, all of them managed by the Office of International Relations and Cooperation. UMA is member of +100 networks and associations.<p/>
+      <br/>
+      <p>UMA stimulates educational innovation and research by boosting the quality of its professors and research groups through their participation in international research projects -managed by Research Results Transference Office (OTRI) - with the support and sponsorship of enterprises from local TechPark (PTA).</p>`,
+      contactPerson: "Ana Rodriguez",
+    },
     fhoo: {
       name: "FH OO Studienbetriebs",
       photo: require("@/assets/images/partners/fhoo.png"),
@@ -108,6 +97,17 @@ const constants = {
       <br/>
       <p>The transport and mobility department at the Campus Steyr is involved in numerous national and European projects and aims to support the greening of transport processes. Current projects concentrate on eco-friendly multimodal transport as well as to create knowledge and awareness for green, sustainable transport especially through education, training, and visibility of this subject. <p/>`,
       contactPerson: "Paul Anderson",
+    },
+    babes: {
+      name: "Babes-Bolyai University",
+      photo: require("@/assets/images/partners/babes.png"),
+      url: "https://www.ubbcluj.ro/en/",
+      description: `<p>Babes Bolyai University is a dynamic, but also traditional institution, with deep roots in Central Europe and strong international academic ties. Its origins date back to 1581, which makes it the oldest institution of higher education in Romania. It was named after two prominent Transylvanian scientists: the Romanian biologist Victor Babes and the Hungarian mathematician Janos Bolyai. <p/>
+      <br/>
+      <p>Located in Transylvania, a European province with a complex history, UBB is the crowning achievement of a long series of attempts to establish here a higher education institution. Thus, the University’s international recognition is materialized in different forms of collaboration and joint scientific programmes with other well-renowned universities from all around the world (Leipzig Univ., Germany; Corvinus Univ., Hungary; Univ. of „La Sapienza”, Italy, Paris XII, France, Michigan State Univ., USA; Dongguk Univ., Korea).<p/>
+      <br/>
+      <p>It is the largest Romanian university (approximately 45.000 students and 1.700 faculty staff), situated at the confluence of the Eastern and Western cultures. As an academic public institution, its aim is to promote and sustain the development of specific cultural components within the local, regional, national and international community. It provides a wide range of internationally competitive BA, MA and Ph.D. programmes in English, French or Italian<p/>`,
+      contactPerson: "Jane Smith",
     },
   },
 
