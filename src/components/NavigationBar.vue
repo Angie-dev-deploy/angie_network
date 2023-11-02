@@ -35,7 +35,7 @@
             >
             <template v-slot:default="{ isActive }">
               <v-card color="transparent" style="backdrop-filter: blur(20px)">
-                <v-toolbar color="transparent">
+                <v-toolbar color="transparent" class="nav-toolbar">
                   <v-btn @click="isActive.value = false">
                     <v-icon size="x-large">mdi-close-circle-outline</v-icon>
                   </v-btn>

@@ -2,7 +2,7 @@
   <div class="app__gallery flex__center">
     <div class="app__gallery-content">
       <h1 class="h-text">Photo Gallery</h1>
-      <p class="p-text" style="color: #aaaaaa; margin-top: 2rem">
+      <p class="p-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis
         ipsum turpis elit elit scelerisque egestas mu.
       </p>
@@ -85,10 +85,16 @@ const scroll = (direction: string) => {
 
 <style lang="scss" scoped>
 .h-text {
-  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  background: linear-gradient(90deg, #006837 0%, #00a551 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 62px;
+}
+.p-text {
+  color: #aaaaaa;
+  margin-top: 2rem;
+  font-size: 24px;
 }
 .flex__center {
   display: flex;

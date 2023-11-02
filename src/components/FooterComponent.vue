@@ -1,5 +1,22 @@
 <template>
   <div class="spacer">
+    <div class="wave">
+      <img class="ivyLeft" :src="ivyLeft" alt="" />
+      <img class="ivyRight" :src="ivyRight" alt="" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        style="display: block"
+      >
+        <path
+          fill="#1F1E05"
+          fill-opacity="1"
+          d="M0,0L80,21.3C160,43,320,85,480,85.3C640,85,800,43,960,21.3C1120,0,1280,0,1360,0L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+          style="--darkreader-inline-fill: #007acc"
+          data-darkreader-inline-fill=""
+        ></path>
+      </svg>
+    </div>
     <div class="footer">
       <div class="footer__container">
         <div class="footer__container-element">
@@ -26,6 +43,7 @@
           <p>2023-1-RO01-KA220-HED-000158031</p>
         </div>
       </div>
+
       <div class="footer__container">
         <div class="footer__container-element">
           <p>© 2023 All rights reserved.</p>
@@ -34,23 +52,16 @@
           <img :src="angie_logo" alt="angie_logo" class="logo" />
         </div>
       </div>
-    </div>
-    <div class="wave">
-      <img class="ivyLeft" :src="ivyLeft" alt="" />
-      <img class="ivyRight" :src="ivyRight" alt="" />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-        style="display: block"
-      >
-        <path
-          fill="#1F1E05"
-          fill-opacity="1"
-          d="M0,0L80,21.3C160,43,320,85,480,85.3C640,85,800,43,960,21.3C1120,0,1280,0,1360,0L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-          style="--darkreader-inline-fill: #007acc"
-          data-darkreader-inline-fill=""
-        ></path>
-      </svg>
+      <div class="footer__container-element">
+        <p class="disclaimer">
+          Funded by the European Union. The views and opinions expressed,
+          however, belong solely to the author(s) and do not necessarily reflect
+          the views and opinions of the European Union or the National Agency
+          for Community Programs in the Field of Education and Vocational
+          Training (ANPCDEFP). Neither the European Union nor ANPCDEFP can be
+          held responsible for them.
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -71,15 +82,12 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
 .wave {
   background-color: #e2dcde;
   padding-top: 300px;
-  z-index: 0;
 }
 
 .ivyLeft {
   position: absolute;
   bottom: 12vw;
-  //width: 16vw;
   width: 300px;
-  //bottom: 15rem;
   z-index: 0;
 }
 
@@ -94,12 +102,14 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
 }
 
 .footer {
+  padding-top: 24px;
   position: absolute;
   bottom: 0;
   z-index: 3;
   display: flex;
   flex-direction: column;
   width: 100%;
+  background-color: #1f1e05;
 }
 
 .footer__container {
@@ -158,6 +168,12 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
 a {
   text-decoration: none; /* Remove the underline */
   color: inherit; /* Inherit the text color from the parent element */
+}
+
+.disclaimer {
+  text-align: center;
+  margin-bottom: 24px;
+  scale: 0.8;
 }
 
 @media screen and (max-width: 940px) {

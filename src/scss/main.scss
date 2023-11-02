@@ -51,3 +51,17 @@
         display: none !important;
     }
 }
+
+.padding-global {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+}
+
+.nav-toolbar {
+    .v-toolbar__content {
+        justify-content: end;
+        .v-btn {
+            border-radius: 40px;
+        }
+    }
+}

@@ -5,7 +5,7 @@
         <v-card-title class="news-title">{{ title }}</v-card-title>
         <v-divider
           :thickness="4"
-          color="#006837"
+          color="#3AB54A"
           class="border-opacity-100 mx-4 my-4"
         ></v-divider>
         <v-card-text class="news-text"><span v-html="text"></span></v-card-text>
@@ -72,6 +72,11 @@ const closeImageDialog = () => {
 </script>
 
 <style scoped>
+.title {
+  color: #006837;
+  font-size: 60px;
+  text-align: center;
+}
 .news-article {
   margin: 3% 8% 8% 8%;
 }

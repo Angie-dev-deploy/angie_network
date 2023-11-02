@@ -18,6 +18,7 @@
     </div>
   </v-img>
   <HomePagePartnersSection />
+  <AboutSection />
   <NewsSection />
   <PhotoCarroussel />
 </template>
@@ -25,6 +26,7 @@
 <script lang="ts" setup>
 import HomePagePartnersSection from "../components/HomePagePartnersSection.vue";
 import NewsSection from "@/components/NewsSection.vue";
+import AboutSection from "@/components/AboutSection.vue";
 import PhotoCarroussel from "../components/PhotoCarroussel.vue";
 import angiePhoto from "../assets/images/angie.png";
 import angieMobilePhoto from "../assets/images/angie_mobile.png";

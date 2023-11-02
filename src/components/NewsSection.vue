@@ -1,18 +1,9 @@
 <template>
-  <div class="news">
+  <div class="news padding-global">
     <div class="news-heading">
       <h1 class="gradient__text">The Latest News</h1>
     </div>
     <div class="news-container">
-      <!-- <div class="news-container_groupA">
-        <NewsCard
-          class="news-card__first"
-          :imgUrl="news[0].photo"
-          :date="news[0].date"
-          :title="news[0].title"
-          :text="news[0].text"
-        />
-      </div> -->
       <div class="news-container_groupB">
         <NewsCard
           v-for="(news1, index) in news.slice(0, 3)"
