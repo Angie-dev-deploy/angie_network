@@ -1,5 +1,11 @@
 <template>
   <div class="news-article">
+    <h1 class="title">WHAT IS NEW?</h1>
+    <v-divider
+      :thickness="4"
+      color="#3AB54A"
+      class="mx-12 border-opacity-100 my-12"
+    ></v-divider>
     <v-row>
       <v-col cols="12" md="6">
         <v-card-title class="news-title">{{ title }}</v-card-title>
@@ -72,6 +78,11 @@ const closeImageDialog = () => {
 </script>
 
 <style scoped>
+.title {
+  color: #006837;
+  font-size: 60px;
+  text-align: center;
+}
 .news-article {
   margin: 3% 8% 8% 8%;
 }

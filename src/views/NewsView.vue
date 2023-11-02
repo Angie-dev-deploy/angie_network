@@ -1,11 +1,5 @@
 <template>
   <div class="news-list bg">
-    <h1 class="title">WHAT IS NEW?</h1>
-    <v-divider
-      :thickness="4"
-      color="#3AB54A"
-      class="mx-12 border-opacity-100 my-12"
-    ></v-divider>
     <NewsComponent
       v-for="(news, index) in article"
       :key="index"
@@ -28,22 +22,10 @@ const article = [
     title: constants.news.article_1.title,
     text: constants.news.article_1.text,
   },
-  {
-    imageUrl_1: constants.news.article_1.photo_1,
-    imageUrl_2: constants.news.article_1.photo_2,
-    title: constants.news.article_2.title,
-    text: constants.news.article_2.text,
-  },
 ];
 </script>
 
 <style scoped>
-.title {
-  color: #006837;
-  font-size: 60px;
-  text-align: center;
-}
-
 .news-list {
   display: flex;
   flex-wrap: wrap;
