@@ -1,12 +1,30 @@
 .navbar {
     &--title {
         font-size: 1.5rem !important;
-        font-weight: 300 !important;
+        font-weight: 800 !important;
+        color: white;
+        -webkit-text-stroke: 1px black;
     }
 
     &--button {
         font-size: 1.5rem !important;
-        font-weight: 300 !important;
+        font-weight: 800 !important;
+        color: white;
+        -webkit-text-stroke: 1px black;
+    }
+}
+
+.menu-button {
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+.menu-button--text {
+    .v-btn__content {
+        font-size: 1.5rem !important;
+        font-weight: 800 !important;
+        color: white;
+        -webkit-text-stroke: 1px black;
     }
 }
 

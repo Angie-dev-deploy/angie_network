@@ -30,14 +30,16 @@
                 color="black"
                 v-bind="props"
               >
-                <v-icon>mdi-menu</v-icon>
+                <v-icon class="menu-button">mdi-menu</v-icon>
               </v-btn></template
             >
             <template v-slot:default="{ isActive }">
               <v-card color="transparent" style="backdrop-filter: blur(20px)">
                 <v-toolbar color="transparent" class="nav-toolbar">
                   <v-btn @click="isActive.value = false">
-                    <v-icon size="x-large">mdi-close-circle-outline</v-icon>
+                    <v-icon size="x-large" class="menu-button"
+                      >mdi-close-circle-outline</v-icon
+                    >
                   </v-btn>
                 </v-toolbar>
                 <v-card-text>
@@ -47,6 +49,7 @@
                       :elevation="0"
                       to="/"
                       @click="isActive.value = false"
+                      class="menu-button--text"
                       >HOME</v-btn
                     >
                     <v-btn
@@ -54,12 +57,14 @@
                       :elevation="0"
                       to="/news"
                       @click="isActive.value = false"
+                      class="menu-button--text"
                       >NEWS</v-btn
                     >
                     <v-btn
                       color="transparent"
                       :elevation="0"
                       @click="isActive.value = false"
+                      class="menu-button--text"
                       >ABOUT</v-btn
                     >
                     <v-btn
@@ -67,6 +72,7 @@
                       :elevation="0"
                       to="/partners"
                       @click="isActive.value = false"
+                      class="menu-button--text"
                       >PARTNERS</v-btn
                     >
                   </div>
