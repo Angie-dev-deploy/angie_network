@@ -16,7 +16,7 @@
           :key="'gallery_image-' + (index + 1)"
         >
           <img :src="image" alt="gallery_image" />
-          <p class="gallery__image-icon">
+          <p class="gallery__image-description mx-12">
             Descriere pt fiec imagine in parte maybe (am nevoie de ajutot, sa se
             updateze cumva cu indexul imaginii)
           </p>
@@ -36,28 +36,22 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 
-import acceuPhoto from "@/assets/images/partners/acceu.png";
-import babesPhoto from "@/assets/images/partners/babes.png";
-import bariPhoto from "@/assets/images/partners/bari.png";
-import fhooPhoto from "@/assets/images/partners/fhoo.png";
-import lisboaPhoto from "@/assets/images/partners/lisboa.png";
-import ljublianaPhoto from "@/assets/images/partners/ljubliana.png";
-import malagaPhoto from "@/assets/images/partners/malaga.png";
-import ucvPhoto from "@/assets/images/partners/ucv.png";
-import unizaPhoto from "@/assets/images/partners/UNIZA.png";
+import constants from "@/shared/constants";
+import poza1 from "@/assets/images/events/poza1.jpeg";
 
 const galleryImages = ref([
-  ucvPhoto,
-  acceuPhoto,
-  bariPhoto,
-  babesPhoto,
-  fhooPhoto,
-  lisboaPhoto,
-  ljublianaPhoto,
-  malagaPhoto,
-  unizaPhoto,
+  poza1,
+  constants.universities.ucv.photo,
+  constants.universities.acceu.photo,
+  constants.universities.lisboa.photo,
+  constants.universities.ljubliana.photo,
+  constants.universities.uniza.photo,
+  constants.universities.bari.photo,
+  constants.universities.malaga.photo,
+  constants.universities.fhoo.photo,
+  constants.universities.babes.photo,
 ]);
 const scrollRef = ref<HTMLElement | null>(null);
 
@@ -107,6 +101,7 @@ const scroll = (direction: string) => {
 
   background: #e2dcde;
   padding: 4rem 0rem 4rem 6rem;
+  max-width: 100% !important;
 }
 
 .app__gallery-content {
@@ -128,7 +123,7 @@ const scroll = (direction: string) => {
   flex: 2;
   display: flex;
   flex-direction: row;
-  max-width: 70%;
+  max-width: 50%;
   position: relative;
 }
 
@@ -139,8 +134,9 @@ const scroll = (direction: string) => {
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  scroll-behavior: smooth; /* Add smooth scroll behavior */
-  scroll-snap-type: x mandatory; /* Add snap-type for horizontal scrolling */
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow-y: hidden;
 }
 
 .app__gallery-images_container::-webkit-scrollbar {
@@ -149,17 +145,17 @@ const scroll = (direction: string) => {
 
 .app__gallery-images_card {
   position: relative;
-  min-width: 301px;
+  min-width: 400px;
   height: 447px;
   margin-right: 2rem;
   scroll-snap-align: start;
   //scroll-snap-align: end;
 }
 
-.gallery__image-icon {
+.gallery__image-description {
   position: absolute;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   opacity: 0;
   transition: 0.5s ease;
   cursor: pointer;
@@ -171,13 +167,16 @@ const scroll = (direction: string) => {
   object-fit: cover;
   opacity: 1;
   transition: 0.5s ease;
+  border-radius: 12px;
 }
 
 .app__gallery-images_card:hover img {
   opacity: 0.35;
+  filter: blur(4px);
+  transform: scale(1.1);
 }
 
-.app__gallery-images_card:hover .gallery__image-icon {
+.app__gallery-images_card:hover .gallery__image-description {
   opacity: 1;
 }
 
@@ -197,7 +196,7 @@ const scroll = (direction: string) => {
   font-size: 4rem;
   cursor: pointer;
   opacity: 0.8;
-  transition: color 0.1s ease-in-out, opacity 0.1s ease-in-out; /* Apply timing functions */
+  transition: color 0.1s ease-in-out, opacity 0.1s ease-in-out;
 }
 
 .gallery__arrow-icon:hover {
