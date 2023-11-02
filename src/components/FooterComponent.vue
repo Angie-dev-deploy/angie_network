@@ -110,6 +110,7 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
   flex-direction: column;
   width: 100%;
   background-color: #1f1e05;
+  min-height: fit-content;
 }
 
 .footer__container {

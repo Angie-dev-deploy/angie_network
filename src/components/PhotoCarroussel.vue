@@ -107,6 +107,7 @@ const scroll = (direction: string) => {
 
   background: #e2dcde;
   padding: 4rem 0rem 4rem 6rem;
+  padding-bottom: 200px !important;
   max-width: 100% !important;
 }
 
