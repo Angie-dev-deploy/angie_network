@@ -1,17 +1,11 @@
 <template>
   <div class="news-article">
-    <h1 class="title">WHAT IS NEW?</h1>
-    <v-divider
-      :thickness="4"
-      color="#3AB54A"
-      class="mx-12 border-opacity-100 my-12"
-    ></v-divider>
     <v-row>
       <v-col cols="12" md="6">
         <v-card-title class="news-title">{{ title }}</v-card-title>
         <v-divider
           :thickness="4"
-          color="#006837"
+          color="#3AB54A"
           class="border-opacity-100 mx-4 my-4"
         ></v-divider>
         <v-card-text class="news-text"><span v-html="text"></span></v-card-text>

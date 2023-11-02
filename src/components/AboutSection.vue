@@ -1,7 +1,13 @@
 <template>
   <div class="about_wrapper">
     <div class="about--left">
-      <span class="title">ABOUT THE PROJECT</span>
+      <span class="title">About the Project</span>
+      <v-divider
+        :thickness="4"
+        color="#3AB54A"
+        class="border-opacity-100 my-4"
+        :class="{ 'w-75': screenSize1400 }"
+      ></v-divider>
       <span class="text"
         >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab obcaecati
         tenetur omnis voluptate rem dolore aliquid harum ratione optio fuga
@@ -43,7 +49,8 @@
 import { watch } from "vue";
 import { ref, onMounted, computed } from "vue";
 
-const screenSizeMobile = computed(() => windowWidth.value < 800);
+const screenSizeMobile = computed(() => windowWidth.value < 770);
+const screenSize1400 = computed(() => windowWidth.value < 1400);
 
 const windowWidth = ref(window.innerWidth);
 
@@ -74,9 +81,9 @@ onMounted(() => {
       justify-content: center !important;
       align-items: center !important;
       .title {
-        font-size: 2rem !important;
         margin: 0 2rem !important;
-        margin-bottom: 4rem !important;
+        margin-bottom: 4rem;
+        text-align: center !important;
       }
       .text {
         font-size: 1rem !important;
@@ -94,13 +101,31 @@ onMounted(() => {
   }
 }
 
+@media screen and (max-width: 770px) {
+  .title {
+    font-size: 46px !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .text {
+    padding: 0 !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .title {
+    font-size: 34px !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
 .about_wrapper {
   background-color: #e2dcde;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  padding: 3rem 0;
+  justify-content: space-between;
+  padding: 3rem;
 }
 
 .about {
@@ -108,10 +133,10 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     flex: 1;
-    max-width: 40vw;
+    max-width: 45vw;
     .title {
-      font-weight: bold;
-      font-size: 3.5vw;
+      font-weight: 800;
+      font-size: 62px;
       background: linear-gradient(90deg, #006837 0%, #00a551 100%);
       background-clip: text;
       -webkit-background-clip: text;
@@ -127,7 +152,7 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     flex: 1;
-    max-width: 40vw;
+    max-width: 45vw;
     margin-top: 0.5rem;
     .text {
       font-size: 1.5rem;

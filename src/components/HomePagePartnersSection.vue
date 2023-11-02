@@ -15,61 +15,53 @@
 </template>
 
 <script lang="ts" setup>
-import ucvLogo from "../assets/images/partners/ucv.png";
-import ACCEULogo from "../assets/images/partners/acceu.png";
-import BariLogo from "../assets/images/partners/bari.png";
-import FHOOLogo from "../assets/images/partners/fhoo.png";
-import LisboaLogo from "../assets/images/partners/lisboa.png";
-import LjublianaLogo from "../assets/images/partners/ljubliana.png";
-import MalagaLogo from "../assets/images/partners/malaga.png";
-import UNIZALogo from "../assets/images/partners/UNIZA.png";
-import BabesLogo from "../assets/images/partners/babes.png";
+import constants from "@/shared/constants";
 
 const partners = [
   {
     id: 0,
     name: "Universitatea din Craiova",
-    logo: ucvLogo,
+    logo: constants.universities.ucv.photo,
   },
   {
     id: 1,
     name: "ACCEU",
-    logo: ACCEULogo,
+    logo: constants.universities.acceu.photo,
   },
   {
     id: 2,
     name: "Bari",
-    logo: BariLogo,
+    logo: constants.universities.lisboa.photo,
   },
   {
     id: 3,
     name: "FHOO",
-    logo: FHOOLogo,
+    logo: constants.universities.ljubliana.photo,
   },
   {
     id: 4,
     name: "Lisboa",
-    logo: LisboaLogo,
+    logo: constants.universities.uniza.photo,
   },
   {
     id: 5,
     name: "Ljubliana",
-    logo: LjublianaLogo,
+    logo: constants.universities.bari.photo,
   },
   {
     id: 6,
     name: "Malaga",
-    logo: MalagaLogo,
+    logo: constants.universities.malaga.photo,
   },
   {
     id: 7,
     name: "UNIZA",
-    logo: UNIZALogo,
+    logo: constants.universities.fhoo.photo,
   },
   {
     id: 8,
     name: "Babes",
-    logo: BabesLogo,
+    logo: constants.universities.babes.photo,
   },
 ];
 </script>
