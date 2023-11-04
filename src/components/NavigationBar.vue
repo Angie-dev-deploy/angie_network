@@ -2,14 +2,16 @@
   <v-app-bar :elevation="elevation" :class="appBarClass">
     <v-container>
       <v-row align="center" width="100%">
-        <v-img
-          class="rounded-image mr-4"
-          src="../assets/logo.png"
-          alt="Logo"
-          max-width="40"
-          max-height="40"
-        ></v-img>
-        <v-toolbar-title class="navbar--title">ANGIE</v-toolbar-title>
+        <v-btn color="transparent" :elevation="0" to="/">
+          <v-img
+            class="rounded-image mr-4"
+            src="../assets/logo.png"
+            alt="Logo"
+            max-width="40"
+            max-height="40"
+          ></v-img>
+          <v-toolbar-title class="navbar--title">ANGIE</v-toolbar-title>
+        </v-btn>
         <v-spacer></v-spacer>
 
         <div class="d-flex navbar-desktop">

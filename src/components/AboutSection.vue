@@ -37,12 +37,147 @@
         ipsum temporibus, consequuntur nam mollitia repellendus?</span
       >
       <span class="w-full d-flex mt-4 button-wrapper">
-        <v-btn :elevation="0" style="background: transparent"
+        <v-btn
+          :elevation="0"
+          style="background: transparent"
+          @click="showAboutDialog()"
           >Learn More <v-icon>mdi-page-last</v-icon>
         </v-btn>
       </span>
     </div>
   </div>
+  <v-dialog v-model="isAboutDialogOpen" overlay>
+    <v-card>
+      <div class="pop-up_text-box">
+        <p class="pop-up_text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab obcaecati
+          tenetur omnis voluptate rem dolore aliquid harum ratione optio fuga
+          veritatis iste illum debitis ipsum temporibus, consequuntur nam
+          mollitia repellendus?Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Ab obcaecati tenetur omnis voluptate rem dolore
+          aliquid harum ratione optio fuga veritatis iste illum debitis ipsum
+          temporibus, consequuntur nam mollitia repellendus?Lorem ipsum, dolor
+          sit amet consectetur adipisicing elit. Ab obcaecati tenetur omnis
+          voluptate rem dolore aliquid harum ratione optio fuga veritatis iste
+          illum debim dolore aliquid harum ratione optio fuga veritatis iste
+          illum debitis ipsum temporibus, consequuntur nam mollitia
+          repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Ab obcaecati tenetur omnis voluptate rem dolore aliquid harum ratione
+          optio fuga veritatis iste illum debitis ipsum temporibus, consequuntur
+          nam mollitia repellendus?
+        </p>
+        <br />
+        <p class="pop-up_text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab obcaecati
+          tenetur omnis voluptate rem dolore aliquid harum ratione optio fuga
+          veritatis iste illum debitis ipsum temporibus, consequuntur nam
+          mollitia repellendus?Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Ab obcaecati tenetur omnis voluptate rem dolore
+          aliquid harum ratione optio fuga veritatis iste illum debitis ipsum
+          temporibus, consequuntur nam mollitia repellendus?Lorem ipsum, dolor
+          sit amet consectetur adipisicing elit. Ab obcaecati tenetur omnis
+          voluptate rem dolore aliquid harum ratione optio fuga veritatis iste
+          illum debim dolore aliquid harum ratione optio fuga veritatis iste
+          illum debitis ipsum temporibus, consequuntur nam mollitia
+          repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Ab obcaecati tenetur omnis voluptate rem dolore aliquid harum ratione
+          optio fuga veritatis iste illum debitis ipsum temporibus, consequuntur
+          nam mollitia repellendus?
+        </p>
+        <br />
+        <p class="pop-up_text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab obcaecati
+          tenetur omnis voluptate rem dolore aliquid harum ratione optio fuga
+          veritatis iste illum debitis ipsum temporibus, consequuntur nam
+          mollitia repellendus?Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Ab obcaecati tenetur omnis voluptate rem dolore
+          aliquid harum ratione optio fuga veritatis iste illum debitis ipsum
+          temporibus, consequuntur nam mollitia repellendus?Lorem ipsum, dolor
+          sit amet consectetur adipisicing elit. Ab obcaecati tenetur omnis
+          voluptate rem dolore aliquid harum ratione optio fuga veritatis iste
+          illum debim dolore aliquid harum ratione optio fuga veritatis iste
+          illum debitis ipsum temporibus, consequuntur nam mollitia
+          repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Ab obcaecati tenetur omnis voluptate rem dolore aliquid harum ratione
+          optio fuga veritatis iste illum debitis ipsum temporibus, consequuntur
+          nam mollitia repellendus?
+        </p>
+        <br />
+        <p class="pop-up_text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab obcaecati
+          tenetur omnis voluptate rem dolore aliquid harum ratione optio fuga
+          veritatis iste illum debitis ipsum temporibus, consequuntur nam
+          mollitia repellendus?Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Ab obcaecati tenetur omnis voluptate rem dolore
+          aliquid harum ratione optio fuga veritatis iste illum debitis ipsum
+          temporibus, consequuntur nam mollitia repellendus?Lorem ipsum, dolor
+          sit amet consectetur adipisicing elit. Ab obcaecati tenetur omnis
+          voluptate rem dolore aliquid harum ratione optio fuga veritatis iste
+          illum debim dolore aliquid harum ratione optio fuga veritatis iste
+          illum debitis ipsum temporibus, consequuntur nam mollitia
+          repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Ab obcaecati tenetur omnis voluptate rem dolore aliquid harum ratione
+          optio fuga veritatis iste illum debitis ipsum temporibus, consequuntur
+          nam mollitia repellendus?
+        </p>
+        <br />
+        <p class="pop-up_text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab obcaecati
+          tenetur omnis voluptate rem dolore aliquid harum ratione optio fuga
+          veritatis iste illum debitis ipsum temporibus, consequuntur nam
+          mollitia repellendus?Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Ab obcaecati tenetur omnis voluptate rem dolore
+          aliquid harum ratione optio fuga veritatis iste illum debitis ipsum
+          temporibus, consequuntur nam mollitia repellendus?Lorem ipsum, dolor
+          sit amet consectetur adipisicing elit. Ab obcaecati tenetur omnis
+          voluptate rem dolore aliquid harum ratione optio fuga veritatis iste
+          illum debim dolore aliquid harum ratione optio fuga veritatis iste
+          illum debitis ipsum temporibus, consequuntur nam mollitia
+          repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Ab obcaecati tenetur omnis voluptate rem dolore aliquid harum ratione
+          optio fuga veritatis iste illum debitis ipsum temporibus, consequuntur
+          nam mollitia repellendus?
+        </p>
+        <br />
+        <p class="pop-up_text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab obcaecati
+          tenetur omnis voluptate rem dolore aliquid harum ratione optio fuga
+          veritatis iste illum debitis ipsum temporibus, consequuntur nam
+          mollitia repellendus?Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Ab obcaecati tenetur omnis voluptate rem dolore
+          aliquid harum ratione optio fuga veritatis iste illum debitis ipsum
+          temporibus, consequuntur nam mollitia repellendus?Lorem ipsum, dolor
+          sit amet consectetur adipisicing elit. Ab obcaecati tenetur omnis
+          voluptate rem dolore aliquid harum ratione optio fuga veritatis iste
+          illum debim dolore aliquid harum ratione optio fuga veritatis iste
+          illum debitis ipsum temporibus, consequuntur nam mollitia
+          repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Ab obcaecati tenetur omnis voluptate rem dolore aliquid harum ratione
+          optio fuga veritatis iste illum debitis ipsum temporibus, consequuntur
+          nam mollitia repellendus?
+        </p>
+        <br />
+        <p class="pop-up_text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab obcaecati
+          tenetur omnis voluptate rem dolore aliquid harum ratione optio fuga
+          veritatis iste illum debitis ipsum temporibus, consequuntur nam
+          mollitia repellendus?Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Ab obcaecati tenetur omnis voluptate rem dolore
+          aliquid harum ratione optio fuga veritatis iste illum debitis ipsum
+          temporibus, consequuntur nam mollitia repellendus?Lorem ipsum, dolor
+          sit amet consectetur adipisicing elit. Ab obcaecati tenetur omnis
+          voluptate rem dolore aliquid harum ratione optio fuga veritatis iste
+          illum debim dolore aliquid harum ratione optio fuga veritatis iste
+          illum debitis ipsum temporibus, consequuntur nam mollitia
+          repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Ab obcaecati tenetur omnis voluptate rem dolore aliquid harum ratione
+          optio fuga veritatis iste illum debitis ipsum temporibus, consequuntur
+          nam mollitia repellendus?
+        </p>
+      </div>
+      <v-btn @click="closeAboutDialog" class="pop-up_button">Close</v-btn>
+    </v-card>
+  </v-dialog>
 </template>
 
 <script lang="ts" setup>
@@ -67,9 +202,31 @@ onMounted(() => {
   // Add a window resize event listener to update the windowWidth value
   window.addEventListener("resize", updateWindowWidth);
 });
+
+const isAboutDialogOpen = ref(false);
+
+const showAboutDialog = () => {
+  isAboutDialogOpen.value = true;
+};
+
+const closeAboutDialog = () => {
+  isAboutDialogOpen.value = false;
+};
 </script>
 
 <style lang="scss" scoped>
+.pop-up_text-box {
+  margin: 3rem 4rem;
+  max-width: 100%;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+.pop-up_text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
 @media screen and (max-width: 1400px) {
   .about_wrapper {
     flex-direction: column !important;
