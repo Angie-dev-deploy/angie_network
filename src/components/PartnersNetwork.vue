@@ -59,7 +59,7 @@ interface Point {
 export default {
   name: "SldSvgD3",
   props: ["id"],
-  setup(props) {
+  setup(props: any) {
     const svgRef = ref(null);
     const svg_width = ref(400);
     const svg_height = ref(400);
