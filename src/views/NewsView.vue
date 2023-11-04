@@ -2,9 +2,7 @@
   <div class="news bg">
     <div class="title">
       <div class="title-section gradient__text">
-        <v-icon small class="mr-4"
-          >mdi-newspaper-variant-multiple-outline</v-icon
-        >
+        <v-icon small class="mr-4">mdi-ab-testing</v-icon>
         <h1 class="title">The Latest News</h1>
       </div>
     </div>
