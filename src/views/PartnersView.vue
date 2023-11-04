@@ -10,12 +10,13 @@
       class="mx-12 border-opacity-100 my-12"
     ></v-divider>
     <CardPartners
-      v-for="(card, index) in cards"
+      v-for="(card, index) in constants.universities"
       :key="index"
-      :image-url="card.imageUrl"
-      :title="card.title"
+      :image-url="card.photo"
+      :title="card.name"
       :description="card.description"
       :contactPerson="card.contactPerson"
+      :circleColor="circleColors[index]"
     />
   </div>
 </template>
@@ -25,61 +26,16 @@ import CardPartners from "@/components/CardPartners.vue";
 import constants from "@/shared/constants";
 import angie_bgless from "@/assets/images/angie_bgless.png";
 
-const cards = [
-  {
-    imageUrl: constants.universities.ucv.photo,
-    title: constants.universities.ucv.name,
-    description: constants.universities.ucv.description,
-    contactPerson: constants.universities.ucv.contactPerson,
-  },
-  {
-    imageUrl: constants.universities.acceu.photo,
-    title: constants.universities.acceu.name,
-    description: constants.universities.acceu.description,
-    contactPerson: constants.universities.acceu.contactPerson,
-  },
-  {
-    imageUrl: constants.universities.lisboa.photo,
-    title: constants.universities.lisboa.name,
-    description: constants.universities.lisboa.description,
-    contactPerson: constants.universities.lisboa.contactPerson,
-  },
-  {
-    imageUrl: constants.universities.ljubliana.photo,
-    title: constants.universities.ljubliana.name,
-    description: constants.universities.ljubliana.description,
-    contactPerson: constants.universities.ljubliana.contactPerson,
-  },
-  {
-    imageUrl: constants.universities.uniza.photo,
-    title: constants.universities.uniza.name,
-    description: constants.universities.uniza.description,
-    contactPerson: constants.universities.uniza.contactPerson,
-  },
-  {
-    imageUrl: constants.universities.bari.photo,
-    title: constants.universities.bari.name,
-    description: constants.universities.bari.description,
-    contactPerson: constants.universities.bari.contactPerson,
-  },
-  {
-    imageUrl: constants.universities.malaga.photo,
-    title: constants.universities.malaga.name,
-    description: constants.universities.malaga.description,
-    contactPerson: constants.universities.malaga.contactPerson,
-  },
-  {
-    imageUrl: constants.universities.fhoo.photo,
-    title: constants.universities.fhoo.name,
-    description: constants.universities.fhoo.description,
-    contactPerson: constants.universities.fhoo.contactPerson,
-  },
-  {
-    imageUrl: constants.universities.babes.photo,
-    title: constants.universities.babes.name,
-    description: constants.universities.babes.description,
-    contactPerson: constants.universities.babes.contactPerson,
-  },
+const circleColors = [
+  "#E3342F",
+  "#F6993F",
+  "#FFED4A",
+  "#38C172",
+  "#4DC0B5",
+  "#3490DC",
+  "#6574CD",
+  "#9561E2",
+  "#F66D9B",
 ];
 </script>
 
@@ -122,9 +78,5 @@ const cards = [
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding-top: 4rem;
-}
-
-.bg {
-  background: #e2dcde;
 }
 </style>

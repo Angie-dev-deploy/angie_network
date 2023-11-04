@@ -32,8 +32,4 @@ const article = [
   justify-content: space-evenly;
   padding-top: 4rem;
 }
-
-.bg {
-  background: #e2dcde;
-}
 </style>

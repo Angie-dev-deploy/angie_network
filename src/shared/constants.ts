@@ -1,6 +1,7 @@
 const constants = {
-  universities: {
-    ucv: {
+  universities: [
+    {
+      id: 0,
       name: "University of Craiova",
       photo: require("@/assets/images/partners/ucv.png"),
       url: "https://www.ucv.ro/en/",
@@ -15,7 +16,8 @@ const constants = {
         <p>University of Craiova provide to all of its over 20,000 students excellent education at all levels. University of Craiova has appropriate expertise in steel structures, organizing specific Bachelor study programs related to civil engineering, mechanical engineering, welding engineering as well as material science.</p>`,
       contactPerson: "George Smith",
     },
-    acceu: {
+    {
+      id: 1,
       name: "Accreditation Council for Entrepreneurial and Engaged Universities",
       photo: require("@/assets/images/partners/acceu.png"),
       url: "https://www.acceu.eu/",
@@ -26,7 +28,8 @@ const constants = {
       <p>Founded in 2016 as part of the University Industry Innovation Network (UIIN) in Amsterdam, the Netherlands, ACEEU spun out of UIIN in 2019 to form an independent organization and moved its headquarters to Muenster in Germany.<p/>`,
       contactPerson: "John Doe",
     },
-    lisboa: {
+    {
+      id: 2,
       name: "Universidade de Lisboa",
       photo: require("@/assets/images/partners/lisboa.png"),
       url: "https://www.ulisboa.pt/en",
@@ -39,7 +42,8 @@ const constants = {
       <p>Instituto Superior Técnico (IST) is the largest and most reputed school of engineering, science and technology in Portugal. IST aims to contribute to the development of society promoting and sharing excellence in higher education in the fields of Architecture, Engineering, Science and Technology. IST offers Bachelor, Master and PhD programmes, lifelong training and develops Research, Development and Innovation activities, which are essential to provide an education based on the top international standards. </p>`,
       contactPerson: "Maria Garcia",
     },
-    ljubliana: {
+    {
+      id: 3,
       name: "Univerza v Ljubljani",
       photo: require("@/assets/images/partners/ljubliana.png"),
       url: "https://www.uni-lj.si/",
@@ -52,7 +56,8 @@ const constants = {
       <p>The University of Ljubljana has close ties with Slovenian companies and foreign enterprises. Our partners include multinational corporations and the most successful Slovenian companies. As we are fully aware of the importance of knowledge and skills in obtaining our own financial sources, we are increasingly developing our market-oriented activities every year.</p>`,
       contactPerson: "Mark Johnson",
     },
-    uniza: {
+    {
+      id: 4,
       name: "Zilinska Univerzita v Ziline",
       photo: require("@/assets/images/partners/UNIZA.png"),
       url: "https://www.uniza.sk/index.php/en/",
@@ -63,7 +68,8 @@ const constants = {
       </p>`,
       contactPerson: "Eva Brown",
     },
-    bari: {
+    {
+      id: 5,
       name: "Politecnico di Bari",
       photo: require("@/assets/images/partners/bari.png"),
       url: "https://www.uniba.it/",
@@ -76,7 +82,8 @@ const constants = {
       <p>Politecnico di Bari is known for its high-quality education, prestigious faculty, and excellent career prospects for its graduates. It has a strong international orientation, welcoming students from all over the world, and offering exchange programs, internships, and joint research projects with universities abroad. Overall, Politecnico di Bari is an excellent choice for students seeking a world-class technical education in a dynamic and welcoming environment.</p>`,
       contactPerson: "John Smith",
     },
-    malaga: {
+    {
+      id: 6,
       name: "Universidad de Malaga",
       photo: require("@/assets/images/partners/malaga.png"),
       url: "https://www.uma.es/",
@@ -87,7 +94,8 @@ const constants = {
       <p>UMA stimulates educational innovation and research by boosting the quality of its professors and research groups through their participation in international research projects -managed by Research Results Transference Office (OTRI) - with the support and sponsorship of enterprises from local TechPark (PTA).</p>`,
       contactPerson: "Ana Rodriguez",
     },
-    fhoo: {
+    {
+      id: 7,
       name: "FH OO Studienbetriebs",
       photo: require("@/assets/images/partners/fhoo.png"),
       url: "https://www.fh-ooe.at/en/",
@@ -98,7 +106,8 @@ const constants = {
       <p>The transport and mobility department at the Campus Steyr is involved in numerous national and European projects and aims to support the greening of transport processes. Current projects concentrate on eco-friendly multimodal transport as well as to create knowledge and awareness for green, sustainable transport especially through education, training, and visibility of this subject. <p/>`,
       contactPerson: "Paul Anderson",
     },
-    babes: {
+    {
+      id: 8,
       name: "Babes-Bolyai University",
       photo: require("@/assets/images/partners/babes.png"),
       url: "https://www.ubbcluj.ro/en/",
@@ -109,7 +118,7 @@ const constants = {
       <p>It is the largest Romanian university (approximately 45.000 students and 1.700 faculty staff), situated at the confluence of the Eastern and Western cultures. As an academic public institution, its aim is to promote and sustain the development of specific cultural components within the local, regional, national and international community. It provides a wide range of internationally competitive BA, MA and Ph.D. programmes in English, French or Italian<p/>`,
       contactPerson: "Jane Smith",
     },
-  },
+  ],
 
   news: {
     article_1: {
