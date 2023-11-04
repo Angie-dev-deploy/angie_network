@@ -88,7 +88,7 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
   position: absolute;
   bottom: 12vw;
   width: 300px;
-  z-index: 0;
+  z-index: 5;
 }
 
 .ivyRight {
@@ -98,7 +98,7 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
   //width: 24vw;
   width: 450px;
   right: 0;
-  z-index: 0;
+  z-index: 5;
 }
 
 .footer {
@@ -207,6 +207,9 @@ a {
 
   .ivyRight {
     width: 300px;
+  }
+  .spacer {
+    padding-top: 30rem;
   }
 }
 </style>

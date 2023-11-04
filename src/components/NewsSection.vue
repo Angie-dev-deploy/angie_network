@@ -1,5 +1,5 @@
 <template>
-  <div class="news padding-global">
+  <div class="news">
     <div class="news-heading">
       <h1 class="gradient__text">The Latest News</h1>
     </div>
