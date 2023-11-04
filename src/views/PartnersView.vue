@@ -1,6 +1,9 @@
 <template>
   <div class="card-list bg">
-    <h1 class="title">MEET THE PARTNERS</h1>
+    <div class="title-section">
+      <v-img :src="angie_bgless" max-height="200px" max-width="100px"></v-img>
+      <h1 class="title">MEET THE PARTNERS</h1>
+    </div>
     <v-divider
       :thickness="4"
       color="#3AB54A"
@@ -20,6 +23,7 @@
 <script lang="ts" setup>
 import CardPartners from "@/components/CardPartners.vue";
 import constants from "@/shared/constants";
+import angie_bgless from "@/assets/images/angie_bgless.png";
 
 const cards = [
   {
@@ -84,6 +88,33 @@ const cards = [
   color: #006837;
   font-size: 60px;
   text-align: center;
+  padding-right: 100px;
+}
+
+@media screen and (max-width: 550px) {
+  .title {
+    font-size: 40px;
+    padding-right: 0;
+  }
+
+  .title-section {
+    flex-direction: column;
+
+    .v-img {
+      min-width: 80px !important;
+    }
+  }
+}
+
+.title-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .v-img {
+    margin: 0 20px;
+    min-width: 100px;
+  }
 }
 
 .card-list {
