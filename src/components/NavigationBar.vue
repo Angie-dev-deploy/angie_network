@@ -217,4 +217,9 @@ onBeforeUnmount(() => {
   width: 100% !important;
   max-width: none !important;
 }
+
+.v-overlay__content > .v-list {
+  backdrop-filter: blur(20px);
+  background: transparent;
+}
 </style>
