@@ -2,7 +2,7 @@
   <div class="card-list bg">
     <div class="title-section">
       <v-img :src="angie_bgless" max-height="200px" max-width="100px"></v-img>
-      <h1 class="title">MEET THE PARTNERS</h1>
+      <h1 class="title gradient__text">Meet The Partners</h1>
     </div>
     <v-divider
       :thickness="4"
@@ -41,8 +41,8 @@ const circleColors = [
 
 <style scoped>
 .title {
-  color: #006837;
   font-size: 60px;
+  font-weight: 800;
   text-align: center;
   padding-right: 100px;
 }
