@@ -1,11 +1,11 @@
 <template>
   <div class="news bg">
     <div class="title">
-      <div class="title-section">
+      <div class="title-section gradient__text">
         <v-icon small class="mr-4"
           >mdi-newspaper-variant-multiple-outline</v-icon
         >
-        <h1 class="title">THE LATEST NEWS</h1>
+        <h1 class="title">The Latest News</h1>
       </div>
     </div>
     <v-divider
@@ -40,6 +40,9 @@ import news from "@/shared/news";
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  font-size: 60px;
+  font-weight: 800;
+  text-align: center;
 }
 
 .news {
@@ -50,17 +53,11 @@ import news from "@/shared/news";
   background: #e2dcde;
 }
 
-.title {
-  color: #006837;
-  font-size: 60px;
-  text-align: center;
-  padding-right: 100px;
-}
-
 .title-section {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 2rem;
 
   .v-img {
     margin: 0 20px;

@@ -163,12 +163,11 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
   font-size: 25px;
   color: #e2dcde;
   // -webkit-text-stroke: 0.5px black;
-  cursor: pointer;
 }
 
 a {
-  text-decoration: none; /* Remove the underline */
-  color: inherit; /* Inherit the text color from the parent element */
+  text-decoration: none;
+  color: inherit;
 }
 
 .disclaimer {
