@@ -1,35 +1,114 @@
 <template>
-  <div class="news-list bg">
-    <NewsComponent
-      v-for="(news, index) in article"
-      :key="index"
-      :image-url_1="news.imageUrl_1"
-      :image-url_2="news.imageUrl_2"
-      :title="news.title"
-      :text="news.text"
-    />
+  <div class="news bg">
+    <div class="title">
+      <div class="title-section">
+        <v-icon small class="mr-4"
+          >mdi-newspaper-variant-multiple-outline</v-icon
+        >
+        <h1 class="title">THE LATEST NEWS</h1>
+      </div>
+    </div>
+    <v-divider
+      :thickness="4"
+      color="#3AB54A"
+      class="mx-12 border-opacity-100 my-12"
+    ></v-divider>
+    <div class="news-card">
+      <div class="news-container">
+        <div class="news-container_groupB">
+          <NewsCard
+            v-for="(news1, index) in news"
+            :key="index"
+            :imgUrl="news1.photo"
+            :date="news1.date"
+            :title="news1.title"
+            :text="news1.text"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import NewsComponent from "@/components/NewsComponent.vue";
-import constants from "@/shared/constants";
-
-const article = [
-  {
-    imageUrl_1: constants.news.article_1.photo_1,
-    imageUrl_2: constants.news.article_1.photo_2,
-    title: constants.news.article_1.title,
-    text: constants.news.article_1.text,
-  },
-];
+import NewsCard from "@/components/NewsCard.vue";
+import news from "@/shared/news";
 </script>
 
-<style scoped>
-.news-list {
+<style lang="scss" scoped>
+.title {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.news {
   padding-top: 4rem;
+}
+
+.bg {
+  background: #e2dcde;
+}
+
+.title {
+  color: #006837;
+  font-size: 60px;
+  text-align: center;
+  padding-right: 100px;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .v-img {
+    margin: 0 20px;
+    min-width: 100px;
+  }
+}
+
+.news-card {
+  padding: 3rem 4rem;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.news-container_groupB {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+@media screen and (max-width: 990px) {
+  .news-container {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .news-container_groupB {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .title {
+    font-size: 40px;
+    padding-right: 0;
+  }
+
+  .title-section {
+    flex-direction: column;
+
+    .v-img {
+      min-width: 80px !important;
+    }
+  }
 }
 </style>
