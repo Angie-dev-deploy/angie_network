@@ -2,7 +2,7 @@
   <div class="news bg">
     <div class="title">
       <div class="title-section gradient__text">
-        <v-icon small class="mr-4">mdi-ab-testing</v-icon>
+        <v-icon small class="mr-4"><MdiNewspaperIcon /></v-icon>
         <h1 class="title">The Latest News</h1>
       </div>
     </div>
@@ -31,6 +31,7 @@
 <script setup lang="ts">
 import NewsCard from "@/components/NewsCard.vue";
 import news from "@/shared/news";
+import MdiNewspaperIcon from "@/assets/icons/MdiNewspaperIcon.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -90,17 +91,18 @@ import news from "@/shared/news";
   .news-container_groupB {
     grid-template-columns: repeat(1, 1fr);
   }
+  .title {
+    font-size: 50px;
+  }
 }
 
 @media screen and (max-width: 550px) {
   .title {
-    font-size: 40px;
+    font-size: 30px;
     padding-right: 0;
   }
 
   .title-section {
-    flex-direction: column;
-
     .v-img {
       min-width: 80px !important;
     }
