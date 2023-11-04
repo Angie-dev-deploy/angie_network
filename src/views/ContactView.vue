@@ -1,10 +1,13 @@
 <template>
   <div class="bg wrapper heading-global">
-    <h1 class="title py-4 gradient__text">Contact</h1>
+    <div class="title-section">
+      <v-img :src="angie_letter" max-height="200px" max-width="100px"></v-img>
+      <h1 class="title gradient__text">Contact</h1>
+    </div>
     <v-divider
       :thickness="4"
       color="#3AB54A"
-      class="border-opacity-100 my-4 w-75"
+      class="border-opacity-100 my-5 w-90"
     ></v-divider>
     <PartnersNetwork />
     <span class="contact-items-section">
@@ -52,6 +55,7 @@
 
 <script lang="ts" setup>
 import PartnersNetwork from "@/components/PartnersNetwork.vue";
+import angie_letter from "@/assets/images/letter.png";
 
 import { ref } from "vue";
 
@@ -121,6 +125,25 @@ const submitForm = () => {
   margin-bottom: 5rem;
 }
 
+.title-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .v-img {
+    margin: 0 20px;
+    min-width: 120px !important;
+    height: 188px !important;
+  }
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 800;
+  text-align: center;
+  padding-right: 100px;
+}
+
 @media screen and (max-width: 550px) {
   .contact-items {
     font-size: 1rem;
@@ -130,6 +153,14 @@ const submitForm = () => {
   }
   .icons {
     font-size: 2rem;
+  }
+
+  .title-section {
+    flex-direction: column;
+
+    .v-img {
+      min-width: 80px !important;
+    }
   }
 }
 </style>

@@ -7,7 +7,7 @@
     <v-divider
       :thickness="4"
       color="#3AB54A"
-      class="mx-12 border-opacity-100 my-12"
+      class="mx-12 border-opacity-100 my-5"
     ></v-divider>
     <CardPartners
       v-for="(card, index) in constants.universities"
@@ -54,8 +54,6 @@ const circleColors = [
   }
 
   .title-section {
-    flex-direction: column;
-
     .v-img {
       min-width: 80px !important;
     }
