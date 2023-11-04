@@ -108,24 +108,28 @@
                                 :elevation="0"
                                 to="#"
                                 class="menu-button--text"
+                                @click="isActive.value = false"
                                 >OBJECTIVES</v-list-item
                               >
                               <v-list-item
                                 :elevation="0"
                                 to="#"
                                 class="menu-button--text"
+                                @click="isActive.value = false"
                                 >ACTIVITIES</v-list-item
                               >
                               <v-list-item
                                 :elevation="0"
                                 to="#"
                                 class="menu-button--text"
+                                @click="isActive.value = false"
                                 >OUTPUTS</v-list-item
                               >
                               <v-list-item
                                 :elevation="0"
                                 to="#"
                                 class="menu-button--text"
+                                @click="isActive.value = false"
                                 >DISSEMINATION</v-list-item
                               >
                             </v-col>
@@ -138,7 +142,8 @@
                       :elevation="0"
                       color="transparent"
                       class="menu-button--text"
-                      to="/media"
+                      to="#"
+                      @click="isActive.value = false"
                       >MEDIA</v-btn
                     >
                     <v-btn
@@ -146,6 +151,7 @@
                       color="transparent"
                       class="menu-button--text"
                       to="/contact"
+                      @click="isActive.value = false"
                       >CONTACT</v-btn
                     >
                   </div>

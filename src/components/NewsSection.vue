@@ -25,12 +25,6 @@ import news from "@/shared/news";
 </script>
 
 <style lang="scss" scoped>
-.gradient__text {
-  background: linear-gradient(90deg, #006837 0%, #00a551 100%);
-  width: fit-content;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .news {
   display: flex;
   flex-direction: column;

@@ -37,22 +37,9 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
-
-import constants from "@/shared/constants";
 import poza1 from "@/assets/images/events/poza1.jpeg";
 
-const galleryImages = ref([
-  poza1,
-  constants.universities.ucv.photo,
-  constants.universities.acceu.photo,
-  constants.universities.lisboa.photo,
-  constants.universities.ljubliana.photo,
-  constants.universities.uniza.photo,
-  constants.universities.bari.photo,
-  constants.universities.malaga.photo,
-  constants.universities.fhoo.photo,
-  constants.universities.babes.photo,
-]);
+const galleryImages = ref([poza1, poza1, poza1]);
 const scrollRef = ref<HTMLElement | null>(null);
 
 const scroll = (direction: string) => {

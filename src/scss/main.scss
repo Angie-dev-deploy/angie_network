@@ -1,4 +1,19 @@
 @import "_aboutSection.scss";
+.bg {
+    background: #e2dcde;
+  }
+
+.gradient__text {
+    background: linear-gradient(90deg, #006837 0%, #00a551 100%);
+    width: fit-content;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading-global {
+  font-size: 62px;
+  font-weight: 800;
+}
 
 .navbar {
   &--title {
@@ -69,10 +84,70 @@
       padding: 0 !important;
     }
 
-    .v-list-item {
-      &__content {
-        text-align: center;
-      }
+    &--dropdown {
+        .v-expansion-panel-title {
+            font-size: 1.5rem !important;
+            font-weight: 800 !important;
+            color: white;
+            -webkit-text-stroke: 1px black;
+            padding: 0 !important;
+            height: 36px !important;
+            min-height: 0px !important;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            &__icon {
+                margin: 0 !important;
+            }
+
+            .v-row{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: fit-content !important;
+            }
+            .v-col {
+                padding: 0 0 0 36px !important;
+                max-width: fit-content !important;
+            }
+        }
+
+        .v-expansion-panel-text {
+            backdrop-filter: blur(40px);
+        }
+
+        .v-list-item {
+            color: transparent;
+            &__content {
+                
+                color: white;
+            }
+        }
+
+        .menu-button--text {
+            font-weight: 800;
+            font-size: 1.5rem;
+            -webkit-text-stroke: 1px black;
+        }
+
+        .v-row {
+            padding: 0 !important;
+        }
+        .v-col {
+            padding: 0 !important;
+        }
+
+        .v-list-item{
+            &__content{
+                text-align: center;
+                -webkit-text-stroke: 1px black;
+                font-size: 1.5rem !important;
+                font-weight: 800 !important;
+                color: white;
+            }
+        }
     }
   }
 }

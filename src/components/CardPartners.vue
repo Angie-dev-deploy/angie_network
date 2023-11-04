@@ -3,8 +3,8 @@
     <v-dialog width="500">
       <template v-slot:activator="{ props }">
         <v-icon class="info-btn" color="black" v-bind="props">
-          mdi-information-outline</v-icon
-        >
+          mdi-information-outline
+        </v-icon>
       </template>
 
       <template v-slot:default="{ isActive }">
@@ -13,15 +13,20 @@
 
           <v-card-actions>
             <v-spacer></v-spacer>
-
             <v-btn text="Close" @click="isActive.value = false"></v-btn>
           </v-card-actions>
         </v-card>
       </template>
     </v-dialog>
 
-    <div class="circle" style="right: 40px; background-color: #2a940a"></div>
-    <div class="circle" style="right: 70px; background-color: #3ab54a"></div>
+    <div
+      class="circle"
+      :style="{ right: '40px', backgroundColor: circleColor }"
+    ></div>
+    <div
+      class="circle"
+      :style="{ right: '70px', backgroundColor: circleColor, opacity: 0.8 }"
+    ></div>
     <div class="img-title">
       <v-img
         :src="imageUrl"
@@ -34,8 +39,8 @@
       </v-card-title>
     </div>
     <span class="card-info ml-8 mb-4 align-end">
-      Contact person: {{ contactPerson }}</span
-    >
+      Contact person: {{ contactPerson }}
+    </span>
   </v-card>
 </template>
 
@@ -56,6 +61,10 @@ const props = defineProps({
     required: true,
   },
   contactPerson: {
+    type: String,
+    required: true,
+  },
+  circleColor: {
     type: String,
     required: true,
   },
