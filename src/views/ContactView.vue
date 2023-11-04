@@ -1,6 +1,6 @@
 <template>
   <div class="bg wrapper heading-global">
-    <span class="title py-4 gradient__text">Contact</span>
+    <h1 class="title py-4 gradient__text">Contact</h1>
     <v-divider
       :thickness="4"
       color="#3AB54A"
@@ -33,14 +33,59 @@
         <v-icon color="#006837">mdi-linkedin</v-icon>
       </a>
     </div>
+    <div class="form">
+      <div class="phrase">
+        <v-icon class="mr-5">mdi-lightbulb-on-outline</v-icon>
+        <p>Do you have any questions for us?</p>
+      </div>
+      <v-container>
+        <v-form @submit.prevent="submitForm" class="d-flex flex-column">
+          <v-text-field v-model="name" label="Name" required></v-text-field>
+          <v-text-field v-model="email" label="Email" required></v-text-field>
+          <v-textarea v-model="message" label="Message" required></v-textarea>
+          <v-btn type="submit" color="primary">Submit</v-btn>
+        </v-form>
+      </v-container>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import PartnersNetwork from "@/components/PartnersNetwork.vue";
+
+import { ref } from "vue";
+
+const name = ref("");
+const email = ref("");
+const message = ref("");
+
+const submitForm = () => {
+  // Handle the form submission here (e.g., send data to the server)
+  // You can use Axios or any other HTTP library to send the data.
+  console.log("Name:", name.value);
+  console.log("Email:", email.value);
+  console.log("Message:", message.value);
+
+  // Reset the form
+  name.value = "";
+  email.value = "";
+  message.value = "";
+};
 </script>
 
 <style lang="scss" scoped>
+.phrase {
+  display: flex;
+  font-size: 3rem;
+  margin: 0 1rem 2rem 1rem;
+  color: #006837;
+  font-weight: 800;
+  p {
+    text-align: center;
+  }
+  align-items: center;
+}
+
 .wrapper {
   margin: 0;
   display: flex;
@@ -72,11 +117,19 @@ import PartnersNetwork from "@/components/PartnersNetwork.vue";
   flex-direction: row;
   justify-content: space-evenly;
   color: #006837;
+  font-size: 3rem;
+  margin-bottom: 5rem;
 }
 
 @media screen and (max-width: 550px) {
   .contact-items {
     font-size: 1rem;
+  }
+  .phrase {
+    font-size: 1.2rem;
+  }
+  .icons {
+    font-size: 2rem;
   }
 }
 </style>
