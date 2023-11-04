@@ -1,147 +1,147 @@
+@import "_aboutSection.scss";
+
 .navbar {
-    &--title {
-        font-size: 1.5rem !important;
-        font-weight: 800 !important;
+  &--title {
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    color: white;
+    -webkit-text-stroke: 1px black;
+  }
+
+  &--button {
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    color: white;
+    -webkit-text-stroke: 1px black;
+  }
+
+  &--dropdown {
+    .v-expansion-panel-title {
+      font-size: 1.5rem !important;
+      font-weight: 800 !important;
+      color: white;
+      -webkit-text-stroke: 1px black;
+      padding: 0 !important;
+      height: 36px !important;
+      min-height: 0px !important;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      &__icon {
+        margin: 0 !important;
+      }
+
+      .v-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: fit-content !important;
+      }
+      .v-col {
+        padding: 0 0 0 36px !important;
+        max-width: fit-content !important;
+      }
+    }
+
+    .v-expansion-panel-text {
+      backdrop-filter: blur(40px);
+    }
+
+    .v-list-item {
+      color: transparent;
+      &__content {
         color: white;
-        -webkit-text-stroke: 1px black;
+      }
     }
 
-    &--button {
-        font-size: 1.5rem !important;
-        font-weight: 800 !important;
-        color: white;
-        -webkit-text-stroke: 1px black;
+    .menu-button--text {
+      font-weight: 800;
+      font-size: 1.5rem;
+      -webkit-text-stroke: 1px black;
     }
 
-    &--dropdown {
-        .v-expansion-panel-title {
-            font-size: 1.5rem !important;
-            font-weight: 800 !important;
-            color: white;
-            -webkit-text-stroke: 1px black;
-            padding: 0 !important;
-            height: 36px !important;
-            min-height: 0px !important;
-
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-
-            &__icon {
-                margin: 0 !important;
-            }
-
-            .v-row{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                width: fit-content !important;
-            }
-            .v-col {
-                padding: 0 0 0 36px !important;
-                max-width: fit-content !important;
-            }
-        }
-
-        .v-expansion-panel-text {
-            backdrop-filter: blur(40px);
-        }
-
-        .v-list-item {
-            color: transparent;
-            &__content {
-                
-                color: white;
-            }
-        }
-
-        .menu-button--text {
-            font-weight: 800;
-            font-size: 1.5rem;
-            -webkit-text-stroke: 1px black;
-        }
-
-        .v-row {
-            padding: 0 !important;
-        }
-        .v-col {
-            padding: 0 !important;
-        }
-
-        .v-list-item{
-            &__content{
-                text-align: center;
-            }
-        }
+    .v-row {
+      padding: 0 !important;
     }
+    .v-col {
+      padding: 0 !important;
+    }
+
+    .v-list-item {
+      &__content {
+        text-align: center;
+      }
+    }
+  }
 }
 
 .menu-button {
-    color: white;
-    -webkit-text-stroke: 1px black;
+  color: white;
+  -webkit-text-stroke: 1px black;
 }
 
 .menu-button--text {
-    .v-btn__content {
-        font-size: 1.5rem !important;
-        font-weight: 800 !important;
-        color: white;
-        -webkit-text-stroke: 1px black;
-    }
+  .v-btn__content {
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    color: white;
+    -webkit-text-stroke: 1px black;
+  }
 }
 
 @media screen and (max-width: 1800px) {
-    .project-heading {
-        font-size: 3rem !important;
-        font-weight: 300 !important;
-    }
+  .project-heading {
+    font-size: 3rem !important;
+    font-weight: 300 !important;
+  }
 
-    .project-subheading {
-        font-size: 2rem !important;
-        font-weight: 300 !important;
-}
-    
+  .project-subheading {
+    font-size: 2rem !important;
+    font-weight: 300 !important;
+  }
 }
 
 @media screen and (max-width: 1300px) {
-    .project-heading {
-        font-size: 4vw !important;
-        font-weight: 300 !important;
-        left: 10vw !important;
-    }
+  .project-heading {
+    font-size: 4vw !important;
+    font-weight: 300 !important;
+    left: 10vw !important;
+  }
 
-    .project-subheading {
-        font-size: 3vw !important;
-        font-weight: 300 !important;
-        right: 5vw !important;
-    }
+  .project-subheading {
+    font-size: 3vw !important;
+    font-weight: 300 !important;
+    right: 5vw !important;
+  }
 
-    .navbar-desktop {
-        display: none !important;
-    }
+  .navbar-desktop {
+    display: none !important;
+  }
 
-    .transparent-toolbar {
-        background-color: transparent;
-        backdrop-filter: blur(20px) !important;
-      }
+  .transparent-toolbar {
+    background-color: transparent;
+    backdrop-filter: blur(20px) !important;
+  }
 }
 
 @media screen and (min-width: 1301px) {
-    .navbar-mobile {
-        display: none !important;
-    }
+  .navbar-mobile {
+    display: none !important;
+  }
 }
 
 .padding-global {
-    padding-left: 4rem !important;
-    padding-right: 4rem !important;
+  padding-left: 4rem !important;
+  padding-right: 4rem !important;
 }
 
 .nav-toolbar {
-    .v-toolbar__content {
-        justify-content: end;
-        .v-btn {
-            border-radius: 40px;
-        }
+  .v-toolbar__content {
+    justify-content: end;
+    .v-btn {
+      border-radius: 40px;
     }
+  }
 }
