@@ -27,6 +27,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "objectives",
     component: () => import("../views/ObjectivesView.vue"),
   },
+  {
+    path: "/activities",
+    name: "activities",
+    component: () => import("../views/ActivitiesView.vue"),
+  },
 ];
 
 const router = createRouter({
