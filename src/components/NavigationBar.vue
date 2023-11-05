@@ -106,28 +106,28 @@
                             <v-col>
                               <v-list-item
                                 :elevation="0"
-                                to="#"
+                                to="/objectives"
                                 class="menu-button--text"
                                 @click="isActive.value = false"
                                 >OBJECTIVES</v-list-item
                               >
                               <v-list-item
                                 :elevation="0"
-                                to="#"
+                                to="/activities"
                                 class="menu-button--text"
                                 @click="isActive.value = false"
                                 >ACTIVITIES</v-list-item
                               >
                               <v-list-item
                                 :elevation="0"
-                                to="#"
+                                to="/outputs"
                                 class="menu-button--text"
                                 @click="isActive.value = false"
                                 >OUTPUTS</v-list-item
                               >
                               <v-list-item
                                 :elevation="0"
-                                to="#"
+                                to="/dissemination"
                                 class="menu-button--text"
                                 @click="isActive.value = false"
                                 >DISSEMINATION</v-list-item
