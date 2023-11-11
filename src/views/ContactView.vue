@@ -47,6 +47,13 @@
           <v-text-field v-model="email" label="Email" required></v-text-field>
           <v-textarea v-model="message" label="Message" required></v-textarea>
           <v-btn type="submit" color="primary">Submit</v-btn>
+
+          <v-snackbar v-model="errorSnackbar" color="error" timeout="3000">{{
+            errorMessage
+          }}</v-snackbar>
+          <v-snackbar v-model="successSnackbar" color="success" timeout="3000"
+            >Email sent successfully!</v-snackbar
+          >
         </v-form>
       </v-container>
     </div>
@@ -55,25 +62,63 @@
 
 <script lang="ts" setup>
 import PartnersNetwork from "@/components/PartnersNetwork.vue";
+import emailjs from "emailjs-com";
 import angie_letter from "@/assets/images/letter.png";
 
-import { ref } from "vue";
+import { ref, Ref } from "vue";
+
+const emailRules = [
+  (v: string) => !!v || "Email is required",
+  (v: string) => /^\S+@\S+\.\S+$/.test(v) || "Email must be valid",
+];
+
+const errorSnackbar = ref(false);
+const successSnackbar = ref(false);
+const errorMessage = ref("");
 
 const name = ref("");
 const email = ref("");
 const message = ref("");
 
 const submitForm = () => {
-  // Handle the form submission here (e.g., send data to the server)
-  // You can use Axios or any other HTTP library to send the data.
-  console.log("Name:", name.value);
-  console.log("Email:", email.value);
-  console.log("Message:", message.value);
+  if (!validateEmail(email.value)) {
+    showErrorSnackbar("Invalid email address");
+    return;
+  }
 
-  // Reset the form
-  name.value = "";
-  email.value = "";
-  message.value = "";
+  emailjs.init("Uh0VS73Fa3-j3c1Dp");
+  emailjs
+    .send("service_s4pz3xc", "template_5vox5kk", {
+      from_name: name.value,
+      from_email: email.value,
+      message: message.value,
+    })
+    .then(() => {
+      // Clear form fields
+      name.value = "";
+      email.value = "";
+      message.value = "";
+
+      // Show success snackbar
+      showSuccessSnackbar("Email sent successfully!");
+    })
+    .catch((error) => {
+      showErrorSnackbar("Failed to send email. Please try again later.");
+      console.error("Email sending failed:", error);
+    });
+};
+
+const validateEmail = (email: string) => {
+  return /^\S+@\S+\.\S+$/.test(email);
+};
+
+const showErrorSnackbar = (message: string) => {
+  errorMessage.value = message;
+  errorSnackbar.value = true;
+};
+
+const showSuccessSnackbar = (message: string) => {
+  successSnackbar.value = true;
 };
 </script>
 

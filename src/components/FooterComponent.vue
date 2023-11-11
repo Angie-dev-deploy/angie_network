@@ -21,8 +21,8 @@
       <div class="footer__container">
         <div class="footer__container-element">
           <h3>Contact Us</h3>
-          <p>E-mail:</p>
-          <p>Phone:</p>
+          <p>E-mail: angie.project.2023@gmail.com</p>
+          <p>Phone: +40723684262</p>
         </div>
         <div class="footer__container-element">
           <h3>Follow Us</h3>

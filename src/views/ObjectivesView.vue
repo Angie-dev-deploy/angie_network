@@ -14,7 +14,7 @@
     <div class="content">
       <section>
         <div class="text-box">
-          <h1 class="text">Scope</h1>
+          <h1 class="section-title">Scope</h1>
         </div>
         <v-card>
           <v-card-text class="text-card">
@@ -40,7 +40,7 @@
 
       <section>
         <div class="text-box">
-          <h1 class="text">General Objectives</h1>
+          <h1 class="section-title">General Objectives</h1>
         </div>
         <v-card>
           <v-card-text class="text-card">
@@ -63,7 +63,7 @@
 
       <section>
         <div class="text-box">
-          <h1 class="text">Specific Objectives</h1>
+          <h1 class="section-title">Specific Objectives</h1>
         </div>
         <v-card>
           <v-card-text class="text-card">
@@ -155,7 +155,6 @@ import MdiTargetIcon from "@/assets/icons/MdiTargetIcon.vue";
 .text-box {
   display: inline-block;
   background-color: #3ab54a;
-  width: 30rem;
   box-shadow: 16px 16px 0px 0px #006837;
   margin-bottom: 2rem;
 }
@@ -166,7 +165,7 @@ import MdiTargetIcon from "@/assets/icons/MdiTargetIcon.vue";
 
 section {
   margin-bottom: 5rem;
-  .text {
+  .section-title {
     font-size: 50px;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -174,6 +173,7 @@ section {
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: #006837;
     margin: 0 0 0 1rem;
+    padding-right: 20px;
   }
   .bold {
     font-weight: 600;
@@ -226,8 +226,8 @@ section {
   .text-box {
     width: 20rem;
   }
-  .text {
-    font-size: 40px;
+  .section-title {
+    font-size: 40px !important;
   }
 }
 
@@ -237,10 +237,10 @@ section {
     padding-right: 0;
   }
   .text-box {
-    width: 15rem;
+    width: 18rem;
   }
-  .text {
-    font-size: 30px;
+  .section-title {
+    font-size: 30px !important;
   }
 
   .title-section {
@@ -253,6 +253,15 @@ section {
   }
   .text-card {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .text-box {
+    width: 15rem;
+  }
+  .text-card {
+    padding: 0;
   }
 }
 </style>

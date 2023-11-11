@@ -152,7 +152,6 @@ section {
   justify-content: space-evenly;
   font-size: 60px;
   font-weight: 800;
-  text-align: center;
 }
 
 .title-section {
@@ -175,9 +174,13 @@ section {
   .content {
     margin: 0 5rem;
   }
+
+  .text-box {
+    width: 30rem;
+  }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 850px) {
   .title {
     font-size: 50px;
   }
@@ -185,7 +188,7 @@ section {
     width: 20rem;
   }
   .text {
-    font-size: 40px;
+    font-size: 40px !important;
   }
 }
 
@@ -195,10 +198,10 @@ section {
     padding-right: 0;
   }
   .text-box {
-    width: 15rem;
+    width: 18rem;
   }
   .text {
-    font-size: 30px;
+    font-size: 30px !important;
   }
 
   .title-section {
@@ -211,6 +214,15 @@ section {
   }
   .text-card {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .text-box {
+    width: 15rem;
+  }
+  .text-card {
+    padding: 0;
   }
 }
 </style>
