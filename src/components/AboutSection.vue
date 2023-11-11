@@ -28,7 +28,7 @@
   </div>
   <v-dialog v-model="isAboutDialogOpen" overlay>
     <v-card>
-      <h1 class="gradient__text d-flex ml-16 mt-8">
+      <h1 class="gradient__text d-flex ml-16 mt-8 about-title">
         {{ constants.about.title }}
       </h1>
       <span v-html="constants.about.full" class="pop-up_text-box"> </span>
@@ -73,6 +73,22 @@ const closeAboutDialog = () => {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width: 550px) {
+  .pop-up_text-box {
+    margin: 2rem 2rem !important;
+  }
+
+  .about-title {
+    width: 100% !important;
+    margin-left: 0 !important;
+    justify-content: center !important;
+  }
+
+  .title {
+    margin: 0 !important;
+  }
+}
+
 .pop-up_text-box {
   margin: 3rem 4rem;
   max-width: 100%;
@@ -97,13 +113,13 @@ const closeAboutDialog = () => {
       justify-content: center !important;
       align-items: center !important;
       .title {
-        margin: 0 2rem !important;
+        margin: 0 2rem;
         margin-bottom: 4rem;
         text-align: center !important;
       }
       .text {
         font-size: 1rem !important;
-        padding: 0 2rem !important;
+        padding: 0 2rem;
       }
     }
 
