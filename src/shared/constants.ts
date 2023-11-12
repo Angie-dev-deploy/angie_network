@@ -185,6 +185,9 @@ const constants = {
     <br />
     `,
   },
+  underConstruction: {
+    content: `OUR TEAM IS WORKING HARD TO DELIVER THIS PAGE AS SOON AS POSSIBLE! THANK YOU FOR YOUR PATIENCE!`,
+  },
 };
 
 export default constants;

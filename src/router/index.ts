@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import UnderConstructionView from "../views/UnderConstructionView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -31,6 +32,21 @@ const routes: Array<RouteRecordRaw> = [
     path: "/activities",
     name: "activities",
     component: () => import("../views/ActivitiesView.vue"),
+  },
+  {
+    path: "/media",
+    name: "media",
+    component: UnderConstructionView,
+  },
+  {
+    path: "/outputs",
+    name: "outputs",
+    component: UnderConstructionView,
+  },
+  {
+    path: "/dissemination",
+    name: "dissemination",
+    component: UnderConstructionView,
   },
 ];
 
