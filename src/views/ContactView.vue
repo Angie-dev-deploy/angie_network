@@ -9,7 +9,7 @@
       color="#3AB54A"
       class="border-opacity-100 my-5 w-90"
     ></v-divider>
-    <PartnersNetwork />
+    <WorldMap />
     <span class="contact-items-section">
       <span class="contact-items">
         <v-icon class="mx-2" small>mdi-email</v-icon>
@@ -61,8 +61,9 @@
 </template>
 
 <script lang="ts" setup>
-import PartnersNetwork from "@/components/PartnersNetwork.vue";
+import WorldMap from "@/components/WorldMap.vue";
 import emailjs from "emailjs-com";
+import constants from "@/shared/constants";
 import angie_letter from "@/assets/images/letter.png";
 
 import { ref, Ref } from "vue";

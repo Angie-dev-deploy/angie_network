@@ -9,6 +9,14 @@
       color="#3AB54A"
       class="mx-12 border-opacity-100 my-5"
     ></v-divider>
+    <span>
+      <PartnersNetwork />
+    </span>
+    <v-divider
+      :thickness="4"
+      color="#3AB54A"
+      class="mx-12 border-opacity-100 my-5"
+    ></v-divider>
     <CardPartners
       v-for="(card, index) in constants.universities"
       :key="index"
@@ -24,6 +32,7 @@
 <script lang="ts" setup>
 import CardPartners from "@/components/CardPartners.vue";
 import constants from "@/shared/constants";
+import PartnersNetwork from "@/components/PartnersNetwork.vue";
 import angie_bgless from "@/assets/images/angie_bgless.png";
 
 const circleColors = [

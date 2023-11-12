@@ -142,7 +142,7 @@
                       :elevation="0"
                       color="transparent"
                       class="menu-button--text"
-                      to="#"
+                      to="/media"
                       @click="isActive.value = false"
                       >MEDIA</v-btn
                     >
