@@ -26,13 +26,13 @@
     </span>
 
     <div class="icons">
-      <a href="https://www.facebook.com/" target="_blank">
+      <a href="https://www.facebook.com/profile.php?id=61553343279250&sk=about_details" target="_blank">
         <v-icon color="#006837">mdi-facebook</v-icon>
       </a>
-      <a href="https://www.instagram.com/" target="_blank">
+      <a href="https://www.instagram.com/angie._.project/" target="_blank">
         <v-icon color="#006837">mdi-instagram</v-icon>
       </a>
-      <a href="https://www.linkedin.com/" target="_blank">
+      <a href="https://www.linkedin.com/in/angie-project-a7398929b/" target="_blank">
         <v-icon color="#006837">mdi-linkedin</v-icon>
       </a>
     </div>
