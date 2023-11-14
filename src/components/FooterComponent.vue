@@ -27,7 +27,9 @@
         <div class="footer__container-element">
           <h3>Follow Us</h3>
           <div class="icons">
-            <a href="https://www.facebook.com/profile.php?id=61553343279250&sk=about_details" target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=61553343279250&sk=about_details"
+              target="_blank"
+            >
               <v-icon>mdi-facebook</v-icon>
             </a>
             <a href="https://www.instagram.com/angie._.project/" target="_blank">
