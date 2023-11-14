@@ -32,10 +32,14 @@
             >
               <v-icon>mdi-facebook</v-icon>
             </a>
-            <a href="https://www.instagram.com/angie._.project/" target="_blank">
+            <a href="https://www.instagram.com/angie._.project/"
+              target="_blank"
+            >
               <v-icon>mdi-instagram</v-icon>
             </a>
-            <a href="https://www.linkedin.com/in/angie-project-a7398929b/" target="_blank">
+            <a href="https://www.linkedin.com/in/angie-project-a7398929b/"
+              target="_blank"
+            >
               <v-icon>mdi-linkedin</v-icon>
             </a>
           </div>
