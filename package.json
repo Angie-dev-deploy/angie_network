@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "npx eslint --fix \"src/**/*.vue\" \"src/**/*.ts\" \"src/**/*.ts\" --fix && vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "npx eslint --fix \"src/**/*.vue\" \"src/**/*.ts\" \"src/**/*.ts\" --fix && vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
