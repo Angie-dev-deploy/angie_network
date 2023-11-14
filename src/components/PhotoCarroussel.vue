@@ -2,11 +2,10 @@
   <div class="app__gallery flex__center">
     <div class="app__gallery-content">
       <h1 class="h-text">Photo Gallery</h1>
-      <p class="p-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis
-        ipsum turpis elit elit scelerisque egestas mu.
-      </p>
-      <button type="button" class="custom__button">View More</button>
+      <p class="p-text">Here are the latest photos from our project.</p>
+      <router-link type="button" class="custom__button" to="/media">
+        View More
+      </router-link>
     </div>
     <div class="app__gallery-images">
       <div class="app__gallery-images_container" ref="scrollRef">
@@ -16,10 +15,7 @@
           :key="'gallery_image-' + (index + 1)"
         >
           <img :src="image" alt="gallery_image" />
-          <p class="gallery__image-description mx-12">
-            Descriere pt fiec imagine in parte maybe (am nevoie de ajutot, sa se
-            updateze cumva cu indexul imaginii)
-          </p>
+          <p class="gallery__image-description mx-12">Image description.</p>
           <!-- <v-icon class="gallery__image-icon">mdi-information</v-icon> -->
         </div>
       </div>
@@ -71,6 +67,11 @@ const scroll = (direction: string) => {
 </script>
 
 <style lang="scss" scoped>
+.custom__button {
+  text-decoration: none;
+  padding-top: 1rem;
+}
+
 .h-text {
   background: linear-gradient(90deg, #006837 0%, #00a551 100%);
   background-clip: text;
