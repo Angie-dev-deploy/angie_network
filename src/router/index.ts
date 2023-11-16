@@ -53,6 +53,18 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    // If the route has a hash (e.g., #example), scroll to the element
+    if (to.hash) {
+      return { el: to.hash };
+    } else if (savedPosition) {
+      // If a saved position exists, use it
+      return savedPosition;
+    } else {
+      // Otherwise, scroll to the top of the page
+      return { top: 0 };
+    }
+  },
 });
 
 export default router;
