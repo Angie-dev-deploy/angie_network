@@ -13,6 +13,7 @@
           :date="news1.date"
           :title="news1.title"
           :text="news1.text"
+          @click="goToNewsDetailPage(index)"
         />
       </div>
     </div>
@@ -22,6 +23,13 @@
 <script setup lang="ts">
 import NewsCard from "@/components/NewsCard.vue";
 import news from "@/shared/news";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const goToNewsDetailPage = (id: number) => {
+  router.push({ name: "NewsComponent", params: { id: id } });
+};
 </script>
 
 <style lang="scss" scoped>

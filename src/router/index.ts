@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import UnderConstructionView from "../views/UnderConstructionView.vue";
+import NewsComponent from "@/components/NewsComponent.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -17,6 +18,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/news",
     name: "news",
     component: () => import("../views/NewsView.vue"),
+  },
+  {
+    path: "/news/:id", // Dynamic parameter :id
+    name: "NewsComponent",
+    component: NewsComponent,
   },
   {
     path: "/contact",
