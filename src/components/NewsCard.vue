@@ -1,7 +1,7 @@
 <template>
   <div class="news-container_article" @click="emit('click')">
     <div class="news-container_article-image">
-      <v-img :src="imgUrl" class="article-image"></v-img>
+      <v-img :src="imgUrl" class="article-image" cover></v-img>
     </div>
     <div class="news-container_article-content">
       <div>
