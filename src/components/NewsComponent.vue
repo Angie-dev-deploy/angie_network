@@ -2,64 +2,62 @@
   <div class="news-article">
     <v-row>
       <v-col cols="12" md="6">
-        <v-card-title class="news-title">{{ title }}</v-card-title>
+        <v-card-title class="news-title">{{ newsPiece.title }}</v-card-title>
         <v-divider
           :thickness="4"
           color="#3AB54A"
           class="border-opacity-100 mx-4 my-4"
         ></v-divider>
-        <v-card-text class="news-text"><span v-html="text"></span></v-card-text>
-        <v-img
-          :src="imageUrl_1"
-          class="news-image"
-          aspect-ratio="1.5"
-          @click="showImageDialog(imageUrl_1)"
-        ></v-img>
+        <v-card-text class="news-text">
+          <span v-html="newsPiece.text"></span>
+        </v-card-text>
+        <div
+          class="news-image-container"
+          @click="showImageDialog(newsPiece.photo)"
+        >
+          <img :src="newsPiece.photo" class="news-image" alt="News Image" />
+        </div>
       </v-col>
       <v-col cols="12" md="6" class="news-text-container">
-        <v-img
-          :src="imageUrl_2"
-          class="news-image"
-          aspect-ratio="1.5"
-          @click="showImageDialog(imageUrl_2)"
-        ></v-img>
-        <v-card-text class="news-text"><span v-html="text"></span></v-card-text>
+        <div
+          class="news-image-container"
+          @click="showImageDialog(newsPiece.photo_2)"
+        >
+          <img :src="newsPiece.photo_2" class="news-image" alt="News Image 2" />
+        </div>
+        <v-card-text class="news-text">
+          <span v-html="newsPiece.text_2"></span>
+        </v-card-text>
       </v-col>
     </v-row>
 
-    <v-dialog v-model="isImageDialogOpen" max-width="600px" overlay>
-      <v-card max-width="600px">
-        <v-img :src="currentImage" class="img_pop-up"></v-img>
-        <v-btn @click="closeImageDialog">Close</v-btn>
-      </v-card>
-    </v-dialog>
+    <ImagePopup
+      :showPopup="isImageDialogOpen"
+      :selectedImage="currentImage"
+      @close-popup="closeImageDialog"
+    />
+  </div>
+  <div v-if="!newsPiece" class="loading-state">
+    <!-- Loading state or placeholder -->
+    <v-progress-circular indeterminate color="primary"></v-progress-circular>
   </div>
 </template>
 
 <script setup lang="ts">
-import { defineProps, ref } from "vue";
+import { ref, watchEffect } from "vue";
+import { useRoute } from "vue-router";
+import news from "@/shared/news";
+import ImagePopup from "./ImagePopup.vue";
 
-const props = defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  imageUrl_1: {
-    type: String,
-    required: true,
-  },
-  imageUrl_2: {
-    type: String,
-    required: true,
-  },
-  text: {
-    type: String,
-    required: true,
-  },
-});
-
+const route = useRoute();
 const isImageDialogOpen = ref(false);
 const currentImage = ref("");
+const newsId = ref(Number(route.params.id));
+const newsPiece: any = ref(null);
+
+function findNewsById(index: number) {
+  return news.find((piece: any) => piece.index === index);
+}
 
 const showImageDialog = (imageUrl: string) => {
   currentImage.value = imageUrl;
@@ -69,38 +67,76 @@ const showImageDialog = (imageUrl: string) => {
 const closeImageDialog = () => {
   isImageDialogOpen.value = false;
 };
+
+watchEffect(() => {
+  newsId.value = Number(route.params.id);
+  newsPiece.value = findNewsById(newsId.value);
+});
 </script>
 
-<style scoped>
-.title {
-  color: #006837;
-  font-size: 60px;
-  text-align: center;
-}
+<style lang="scss" scoped>
 .news-article {
-  margin: 3% 8% 8% 8%;
+  padding: 6rem 4% 4%;
+  background-color: #e2dcde;
 }
 
 .news-title {
-  font-size: 40px;
+  font-size: 2rem;
   color: #006837;
-}
-
-.news-image {
-  object-fit: cover;
-  width: 100%;
-  margin: 5% 0;
-  cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .news-text {
-  font-size: 14px;
+  font-size: 1rem;
   text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
+.news-image-container {
+  cursor: pointer;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  overflow: hidden; /* Ensure overflow is hidden */
+  margin-bottom: 2rem; /* Adjust margin as needed */
+  display: flex;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0; /* Set margin to zero */
+    padding: 0; /* Set padding to zero */
+    border-radius: 12px;
+  }
 }
 
 .img_pop-up {
   max-width: 100%;
   max-height: 450px;
-  margin: 20px;
+  margin: 1rem 0;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #fff;
+  background-color: #3ab54a;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.loading-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Adjust the height as needed */
 }
 </style>

@@ -11,11 +11,14 @@
       <div class="app__gallery-images_container" ref="scrollRef">
         <div
           class="app__gallery-images_card flex__center"
-          v-for="(image, index) in galleryImages"
+          v-for="(image, index) in media_images"
           :key="'gallery_image-' + (index + 1)"
+          @click="openPopup(image.photo, image.description)"
         >
-          <img :src="image" alt="gallery_image" />
-          <p class="gallery__image-description mx-12">Image description.</p>
+          <img :src="image.photo" alt="gallery_image" />
+          <p class="gallery__image-description mx-12">
+            {{ image.description }}
+          </p>
           <!-- <v-icon class="gallery__image-icon">mdi-information</v-icon> -->
         </div>
       </div>
@@ -29,14 +32,23 @@
       </div>
     </div>
   </div>
+  <ImagePopup
+    :showPopup="popupVisible"
+    :selectedImage="selectedImage"
+    :selectedDescription="selectedDescription"
+    @close-popup="closePopup"
+  ></ImagePopup>
 </template>
 
 <script lang="ts" setup>
 import { ref } from "vue";
-import poza1 from "@/assets/images/events/poza1.jpeg";
+import media_images from "@/shared/media_images";
+import ImagePopup from "@/components/ImagePopup.vue";
 
-const galleryImages = ref([poza1, poza1, poza1]);
 const scrollRef = ref<HTMLElement | null>(null);
+const popupVisible = ref(false);
+const selectedImage = ref("");
+const selectedDescription = ref("");
 
 const scroll = (direction: string) => {
   if (scrollRef.value) {
@@ -47,23 +59,16 @@ const scroll = (direction: string) => {
     }
   }
 };
-// ANIMATIE SCROLL AUTOMAT
-// let currentImageIndex = ref(0);
-// let intervalId = null;
 
-// const startAutoScroll = () => {
-//   intervalId = setInterval(() => {
-//     scroll("right");
-//   }, 3000); // Adjust the interval duration as needed (3000 milliseconds = 3 seconds)
-// };
+const openPopup = (image: any, description: any) => {
+  selectedImage.value = image;
+  selectedDescription.value = description;
+  popupVisible.value = true;
+};
 
-// const stopAutoScroll = () => {
-//   clearInterval(intervalId);
-// };
-
-// onMounted(() => {
-//   startAutoScroll();
-// });
+const closePopup = () => {
+  popupVisible.value = false;
+};
 </script>
 
 <style lang="scss" scoped>
