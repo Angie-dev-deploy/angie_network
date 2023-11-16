@@ -15,7 +15,7 @@
       <div class="news-container">
         <div class="news-container_groupB">
           <NewsCard
-            v-for="(news1, index) in news"
+            v-for="(news1, index) in news.slice()"
             :key="index"
             :imgUrl="news1.photo"
             :date="news1.date"
