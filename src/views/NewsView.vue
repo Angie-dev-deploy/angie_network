@@ -81,8 +81,6 @@ const goToNewsDetailPage = (id: number) => {
 }
 
 .news-container_groupB {
-  flex: 1;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
