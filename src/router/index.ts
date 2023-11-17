@@ -49,11 +49,6 @@ const routes: Array<RouteRecordRaw> = [
     name: "outputs",
     component: UnderConstructionView,
   },
-  {
-    path: "/dissemination",
-    name: "dissemination",
-    component: UnderConstructionView,
-  },
 ];
 
 const router = createRouter({

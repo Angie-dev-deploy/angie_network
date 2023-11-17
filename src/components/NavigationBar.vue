@@ -35,7 +35,6 @@
               <v-list-item to="/objectives">OBJECTIVES</v-list-item>
               <v-list-item to="/activities">ACTIVITIES</v-list-item>
               <v-list-item to="/outputs">OUTPUTS</v-list-item>
-              <v-list-item to="/dissemination">DISSEMINATION</v-list-item>
             </v-list>
           </v-menu>
 
@@ -124,13 +123,6 @@
                                 class="menu-button--text"
                                 @click="isActive.value = false"
                                 >OUTPUTS</v-list-item
-                              >
-                              <v-list-item
-                                :elevation="0"
-                                to="/dissemination"
-                                class="menu-button--text"
-                                @click="isActive.value = false"
-                                >DISSEMINATION</v-list-item
                               >
                             </v-col>
                           </v-row>
