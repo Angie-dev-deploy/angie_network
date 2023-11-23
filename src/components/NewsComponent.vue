@@ -8,11 +8,19 @@
           color="#3AB54A"
           class="border-opacity-100 mx-4 my-4"
         ></v-divider>
+        <div
+          class="news-image-container"
+          v-if="isMobile"
+          @click="showImageDialog(newsPiece.photo)"
+        >
+          <img :src="newsPiece.photo" class="news-image" alt="News Image" />
+        </div>
         <v-card-text class="news-text">
           <span v-html="newsPiece.text"></span>
         </v-card-text>
         <div
           class="news-image-container"
+          v-if="!isMobile"
           @click="showImageDialog(newsPiece.photo)"
         >
           <img :src="newsPiece.photo" class="news-image" alt="News Image" />
@@ -21,11 +29,12 @@
       <v-col cols="12" md="6" class="news-text-container">
         <div
           class="news-image-container"
+          v-if="newsPiece.photo_2"
           @click="showImageDialog(newsPiece.photo_2)"
         >
           <img :src="newsPiece.photo_2" class="news-image" alt="News Image 2" />
         </div>
-        <v-card-text class="news-text">
+        <v-card-text class="news-text" v-if="newsPiece.text_2">
           <span v-html="newsPiece.text_2"></span>
         </v-card-text>
       </v-col>
@@ -44,7 +53,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watchEffect } from "vue";
+import { ref, watchEffect, onMounted, computed } from "vue";
 import { useRoute } from "vue-router";
 import news from "@/shared/news";
 import ImagePopup from "./ImagePopup.vue";
@@ -54,6 +63,18 @@ const isImageDialogOpen = ref(false);
 const currentImage = ref("");
 const newsId = ref(Number(route.params.id));
 const newsPiece: any = ref(null);
+
+const windowWidth = ref(window.innerWidth);
+
+const updateWindowWidth = () => {
+  windowWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+  window.addEventListener("resize", updateWindowWidth);
+});
+
+const isMobile = computed(() => windowWidth.value < 960);
 
 function findNewsById(index: number) {
   return news.find((piece: any) => piece.index === index);
@@ -84,6 +105,7 @@ watchEffect(() => {
   font-size: 2rem;
   color: #006837;
   margin-bottom: 1rem;
+  white-space: wrap;
 }
 
 .news-text {
