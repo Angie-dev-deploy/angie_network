@@ -11,25 +11,25 @@ const news: any = [
     The representatives of 8 European universities and a university association met in Craiova to launch the newest project coordinated by the University of Craiova.</p>
     <br/>
     <p>It was a fruitful meeting, colleagues became friends, tasks became clear.
-    We have started and in the next 24 months we will create a new master's study program dedicated to sustainable development for an innovative and eco Europe</p>
+    The project is on, and in the next 24 months we will create a new master's study program dedicated to sustainable development for an innovative and eco Europe.</p>
     `,
     text_2: `
     <p>Participants:</p>
     <ol style="margin-left: 16px;">
-      <li><b>Emmanuel Ohene</b> / ACEEU GmbH,</li>
-      <li><b>Ines Ascenso Pires, Luís Alves</b> / UNIVERSIDADE DE LISBOA,</li>
-      <li><b>Damjan Klobcar</b> / UNIVERZA V LJUBLJANI,</li>
-      <li><b>Andrej David</b> / ZILINSKA UNIVERSITA V ZILINE,</li>
-      <li><b>Giuseppe Casalino</b> / POLITECNICO DI BARI,</li>
-      <li><b>Manuel Gonzalez Sanchez</b> / UNIVERSIDAD DE MALAGA,</li>
-      <li><b>Bianca Duldner-Borca</b> / FH OO FORSCHUNGS & ENTWICKLUNGS GmbH,</li>
-      <li><b>Mihnea Stoica</b> / BABES BOLYAI UNIVERSITY,</li>
-      <li><b>Dănuț Savu, Gabriel Benga, Dorel Berceanu, Sorin Savu, Dalia Simion, Daniela Tarniță</b> / UNIVERSITY OF CRAIOVA</li>
+      <li><b>Emmanuel Ohene</b> / ACEEU GmbH;</li>
+      <li><b>Ines Ascenso Pires, Luís Alves</b> / UNIVERSIDADE DE LISBOA;</li>
+      <li><b>Damjan Klobcar</b> / UNIVERZA V LJUBLJANI;</li>
+      <li><b>Andrej David</b> / ZILINSKA UNIVERSITA V ZILINE;</li>
+      <li><b>Giuseppe Casalino</b> / POLITECNICO DI BARI;</li>
+      <li><b>Manuel Gonzalez Sanchez</b> / UNIVERSIDAD DE MALAGA;</li>
+      <li><b>Bianca Duldner-Borca</b> / FH OO FORSCHUNGS & ENTWICKLUNGS GmbH;</li>
+      <li><b>Mihnea Stoica</b> / BABEȘ-BOLYAI UNIVERSITY;</li>
+      <li><b>Dănuț Savu, Gabriel Benga, Dorel Berceanu, Sorin Savu, Dalia Simion, Daniela Tarniță</b> / UNIVERSITY OF CRAIOVA;</li>
       <li>Students:
         <ul style="margin-left: 32px;">
-          <li><b>Arianne-Maria Savu</b> / BABES BOLYAI UNIVERSITY</li>
-          <li><b>Alexandru-Andrei Avram</b> / TECHNICAL UNIVERSITY OF CLUJ-NAPOCA</li>
-          <li><b>Pavel Drăgan</b> / BUCHAREST TECHNICAL UNIVERSITY</li>
+          <li><b>Arianne-Maria Savu</b> / BABEȘ-BOLYAI UNIVERSITY;</li>
+          <li><b>Alexandru-Andrei Avram</b> / TECHNICAL UNIVERSITY OF CLUJ-NAPOCA;</li>
+          <li><b>Pavel Drăgan</b> / BUCHAREST TECHNICAL UNIVERSITY.</li>
         </ul>
       </li>
     </ol>
