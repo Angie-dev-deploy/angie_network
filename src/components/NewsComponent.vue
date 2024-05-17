@@ -3,6 +3,9 @@
     <v-row>
       <v-col cols="12" md="6">
         <v-card-title class="news-title">{{ newsPiece.title }}</v-card-title>
+        <v-card-title v-if="newsPiece.subtitle" class="news-subtitle">{{
+          newsPiece.subtitle
+        }}</v-card-title>
         <v-divider
           :thickness="4"
           color="#3AB54A"
@@ -105,6 +108,13 @@ watchEffect(() => {
   font-size: 2rem;
   color: #006837;
   margin-bottom: 1rem;
+  white-space: wrap;
+}
+
+.news-subtitle {
+  font-size: 1.2rem;
+  color: #567466;
+  margin-top: -2rem;
   white-space: wrap;
 }
 

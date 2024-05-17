@@ -5,8 +5,9 @@
     </div>
     <div class="news-container_article-content">
       <div>
-        <p>{{ date }}</p>
+        <p>{{ formattedDate }}</p>
         <h3>{{ title }}</h3>
+        <h4 v-if="subtitle" class="article-subtitle">{{ subtitle }}</h4>
       </div>
       <p>Read Full Article</p>
     </div>
@@ -14,7 +15,8 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits, ref } from "vue";
+import { defineProps, defineEmits, ref, watchEffect } from "vue";
+import { format } from "date-fns";
 
 const emit = defineEmits(["click"]);
 
@@ -31,7 +33,13 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  subtitle: {
+    type: String,
+    required: false,
+  },
 });
+
+const formattedDate = ref(format(new Date(props.date), "MMMM dd, yyyy"));
 </script>
 
 <style scoped>
@@ -105,5 +113,14 @@ const props = defineProps({
     font-size: 18px;
     line-height: 25px;
   }
+}
+
+.article-subtitle {
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: -3rem;
 }
 </style>
