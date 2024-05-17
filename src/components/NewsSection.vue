@@ -6,14 +6,14 @@
     <div class="news-container">
       <div class="news-container_groupB">
         <NewsCard
-          v-for="(news1, index) in news.slice(0, 3)"
-          :key="index"
+          v-for="news1 in news.slice(0, 3)"
+          :key="news1.index"
           class="news-card__second"
           :imgUrl="news1.photo"
           :date="news1.date"
           :title="news1.title"
           :subtitle="news1.subtitle ? news1.subtitle : ''"
-          @click="goToNewsDetailPage(index)"
+          @click="goToNewsDetailPage(news1.index)"
         />
       </div>
     </div>
