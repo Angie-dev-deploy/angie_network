@@ -20,6 +20,7 @@
             :imgUrl="news1.photo"
             :date="news1.date"
             :title="news1.title"
+            :subtitle="news1.subtitle ? news1.subtitle : ''"
             @click="goToNewsDetailPage(index)"
           />
         </div>
