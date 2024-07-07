@@ -1,12 +1,5 @@
 const media_images = [
   {
-    id: 1,
-    photo: require("../../public/images/events/poza1.jpeg"),
-    alt: "Image 1",
-    title: "Image 1",
-    description: "Image 1 description",
-  },
-  {
     id: 2,
     photo: require("../../public/images/events/conference_1.jpeg"),
     alt: "Conference Image 1",
