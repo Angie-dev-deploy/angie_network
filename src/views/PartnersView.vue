@@ -151,10 +151,10 @@ const circleColors = [
   }
 
   .cards-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-evenly !important;
+    width: 100% !important;
   }
 }
 </style>
