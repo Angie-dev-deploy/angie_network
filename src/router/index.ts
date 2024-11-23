@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import UnderConstructionView from "../views/UnderConstructionView.vue";
 import NewsComponent from "@/components/NewsComponent.vue";
@@ -13,6 +13,13 @@ const routes: Array<RouteRecordRaw> = [
     path: "/partners",
     name: "partners",
     component: () => import("../views/PartnersView.vue"),
+    children: [
+      {
+        path: ":hash",
+        name: "partners-section",
+        component: () => import("../views/PartnersView.vue"), // Reuse the same component
+      },
+    ],
   },
   {
     path: "/news",
@@ -52,12 +59,20 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
     // If the route has a hash (e.g., #example), scroll to the element
     if (to.hash) {
-      return { el: to.hash };
+      const element = document.querySelector(to.hash);
+      if (element) {
+        const offset =
+          element.getBoundingClientRect().top + window.scrollY - 64;
+        return window.scrollTo({
+          top: offset,
+          behavior: "smooth",
+        });
+      }
     } else if (savedPosition) {
       // If a saved position exists, use it
       return savedPosition;

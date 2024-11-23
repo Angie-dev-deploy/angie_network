@@ -11,8 +11,19 @@
       class="mx-12 border-opacity-100 my-5"
     ></v-divider>
 
-    <div class="subsection">
-      <span class="subtitle">Founding Members</span>
+    <!-- Founding Members Section -->
+    <div id="founding-members" class="subsection">
+      <span class="subtitle">
+        <v-icon color="#3AB54A" class="mr-2">mdi-account-group</v-icon>
+        Founding Members
+        <button
+          @click="copyLink('founding-members')"
+          class="ml-2 link-icon"
+          title="Copy Link"
+        >
+          <v-icon color="#3AB54A">mdi-link</v-icon>
+        </button>
+      </span>
       <span
         class="section-description"
         v-html="constants.partners.foundingMembersDescription"
@@ -36,14 +47,25 @@
       class="mx-12 border-opacity-100 my-5"
     ></v-divider>
 
-    <div class="subsection">
-      <span class="subtitle">Structure and Objectives</span>
+    <!-- Structure and Objectives Section -->
+    <div id="structure-objectives" class="subsection">
+      <span class="subtitle">
+        <v-icon color="#3AB54A" class="mr-2">mdi-target</v-icon>
+        Structure and Objectives
+        <button
+          @click="copyLink('structure-objectives')"
+          class="ml-2 link-icon"
+          title="Copy Link"
+        >
+          <v-icon color="#3AB54A">mdi-link</v-icon>
+        </button>
+      </span>
       <span
         class="section-description"
         v-html="constants.partners.structureAndObjectivesDescription"
       />
       <span>
-        <PartnersNetwork />
+        <PartnersNetwork class="mb-6" />
       </span>
       <PdfViewerCard :pdfs="structureAndObjectivesPDFs" />
     </div>
@@ -54,8 +76,19 @@
       class="mx-12 border-opacity-100 my-5"
     ></v-divider>
 
-    <div class="subsection">
-      <span class="subtitle">Adding New Members</span>
+    <!-- Adding New Members Section -->
+    <div id="adding-members" class="subsection">
+      <span class="subtitle">
+        <v-icon color="#3AB54A" class="mr-2">mdi-account-plus</v-icon>
+        Adding New Members
+        <button
+          @click="copyLink('adding-members')"
+          class="ml-2 link-icon"
+          title="Copy Link"
+        >
+          <v-icon color="#3AB54A">mdi-link</v-icon>
+        </button>
+      </span>
       <span
         class="section-description"
         v-html="constants.partners.addingNewMembersDescription"
@@ -75,6 +108,9 @@ import {
   structureAndObjectivesPDFs,
   addingNewMembersPDFs,
 } from "@/shared/pdfs";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const circleColors = [
   "#E3342F",
@@ -87,6 +123,19 @@ const circleColors = [
   "#9561E2",
   "#F66D9B",
 ];
+
+function copyLink(sectionId: string) {
+  const url = `${window.location.origin}${window.location.pathname}#${sectionId}`;
+  console.log("URL: ", window.location);
+  navigator.clipboard
+    .writeText(url)
+    .then(() => {
+      router.push({ hash: `#${sectionId}` });
+    })
+    .catch((err) => {
+      console.error("Could not copy link: ", err);
+    });
+}
 </script>
 
 <style scoped>
@@ -125,6 +174,7 @@ const circleColors = [
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  width: 100%;
   padding-top: 4rem;
 }
 
@@ -133,14 +183,16 @@ const circleColors = [
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 3rem;
 
   .subtitle {
     font-size: 30px;
     font-weight: 800;
-    text-align: center;
+    text-align: left;
     width: 100%;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
   }
 
   .section-description {
@@ -154,7 +206,12 @@ const circleColors = [
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: space-evenly !important;
+    row-gap: 8px;
     width: 100% !important;
+  }
+
+  .link-icon {
+    text-decoration: none;
   }
 }
 </style>

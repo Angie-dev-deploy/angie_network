@@ -11,7 +11,9 @@
       color="#3AB54A"
       class="mx-12 border-opacity-100 my-12"
     ></v-divider>
-    <PdfViewerCard :pdfs="pdfs" />
+    <div class="mx-10">
+      <PdfViewerCard :pdfs="pdfs" />
+    </div>
   </div>
 </template>
 

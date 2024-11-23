@@ -72,13 +72,9 @@ const props = defineProps({
 </script>
 
 <style scoped>
-/* Your component's styles */
-
 .card {
   width: 600px; /* Adjust the width as needed */
   height: 300px; /* Adjust the height as needed */
-  margin-top: 10px; /* Add margins for spacing between cards */
-  margin-bottom: 10px;
   background: linear-gradient(71deg, #b5bebf, #c9c9c9, #b5bebf);
 
   border-radius: 12px;

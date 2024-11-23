@@ -37,7 +37,6 @@ const viewPdf = (pdf: any) => {
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  margin: 2rem;
 
   .pdf-card {
     width: 100%;
