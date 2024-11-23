@@ -42,7 +42,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/media",
     name: "media",
-    component: UnderConstructionView,
+    component: () => import("../views/MediaView.vue"),
   },
   {
     path: "/outputs",

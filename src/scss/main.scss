@@ -8,6 +8,10 @@ body {
   background: #e2dcde;
 }
 
+.obj {
+  padding-top: 4rem;
+}
+
 .w-90 {
   width: 90% !important;
 }
@@ -235,5 +239,26 @@ body {
     .v-btn {
       border-radius: 40px;
     }
+  }
+}
+
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-size: 60px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2rem;
+
+  .v-img {
+    margin: 0 20px;
+    min-width: 100px;
   }
 }

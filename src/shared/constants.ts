@@ -188,6 +188,26 @@ const constants = {
   underConstruction: {
     content: `OUR TEAM IS WORKING HARD TO DELIVER THIS PAGE AS SOON AS POSSIBLE! THANK YOU FOR YOUR PATIENCE!`,
   },
+  partners: {
+    foundingMembersDescription: `The members of the consortium implementing the ANGIE - Academic Network for a Green and Innovative Europe project have formally founded the ANGIE network, whose objectives are related to the development and promotion of solutions for the green transition of the industrial, agricultural and service sectors operating in Europe.`,
+    structureAndObjectivesDescription: `<strong>ANGIE Network</strong> is structured in clusters formed around one of the Founding Members. This structure is designed to foster collaboration, innovation, and dissemination of knowledge to support the transition to a sustainable society.
+                                        <br />
+                                        <br />
+                                        A cluster consists of additional academic and societal organizations.
+                                        <br />
+                                        <br />
+                                        Each cluster has its own name to differentiate it from the others.
+                                        <br />
+                                        <br />
+                                        Each cluster is bringing a new member by invitation addressed either by the Founding Member or by one of the cluster members. The cluster members could be universities, research institutions, NGOs, government agencies, and industry partners, all having the common interest and / or expertise of supporting the transition of the society to a sustainable one. Each of the nine clusters should aim for a diverse mix of academic institutions, research bodies, and societal organizations.
+                                        <br />
+                                        <br />
+                                        Each member of a cluster should commit to contributing to research, education, or communication efforts within the cluster.`,
+    addingNewMembersDescription: `The ANGIE network is continuously developing by inviting and accepting new members from the academic area, but not only, in order to carry out as many activities as possible compatible with the declared objectives.
+                                  <br />
+                                  <br />
+                                  The affiliation of a potential new member is made after his invitation by one of the Founding Members, followed by the acceptance of the invitee and the signing of a Memorandum of Understanding by the inviter and the invitee.`,
+  },
 };
 
 export default constants;
