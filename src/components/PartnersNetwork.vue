@@ -56,13 +56,15 @@ interface Point {
   color: string;
 }
 
+const isMobile = ref(window.innerWidth < 1200);
+
 export default {
   name: "SldSvgD3",
   props: ["id"],
   setup(props: any) {
     const svgRef = ref(null);
-    const svg_width = ref(400);
-    const svg_height = ref(400);
+    const svg_width = ref(isMobile.value ? 250 : 400);
+    const svg_height = ref(isMobile.value ? 250 : 400);
     const transform = ref("translate(0,0)");
 
     // Define the specified colors for the 9 points in a clockwise order

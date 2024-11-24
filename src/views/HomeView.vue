@@ -17,6 +17,7 @@
       /><span class="text">2023-1-RO01-KA220-HED-000158031</span>
     </div>
   </v-img>
+  <BecomeAMemberSection :isMobile="isMobile" />
   <HomePagePartnersSection />
   <AboutSection />
   <NewsSection />
@@ -25,6 +26,7 @@
 
 <script lang="ts" setup>
 import HomePagePartnersSection from "../components/HomePagePartnersSection.vue";
+import BecomeAMemberSection from "@/components/BecomeAMemberSection.vue";
 import NewsSection from "@/components/NewsSection.vue";
 import AboutSection from "@/components/AboutSection.vue";
 import PhotoCarroussel from "../components/PhotoCarroussel.vue";
@@ -36,6 +38,8 @@ import { watch } from "vue";
 const selectedImage = ref(
   window.innerWidth >= 1200 ? angiePhoto : angieMobilePhoto
 );
+
+const isMobile = ref(window.innerWidth < 1200);
 
 watch(
   () => window.innerWidth,

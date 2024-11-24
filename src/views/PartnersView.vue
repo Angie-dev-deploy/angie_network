@@ -11,6 +11,39 @@
       class="mx-12 border-opacity-100 my-5"
     ></v-divider>
 
+    <div id="becoming-a-member" class="subsection">
+      <span class="subtitle">
+        <v-icon color="#3AB54A" class="mr-2">
+          mdi-account-multiple-plus-outline
+        </v-icon>
+        Becoming a member
+        <button
+          @click="copyLink('becoming-a-member')"
+          class="ml-2 link-icon"
+          title="Copy Link"
+        >
+          <v-icon color="#3AB54A">mdi-link</v-icon>
+        </button>
+      </span>
+      <v-row>
+        <v-col> <ApplicationFormComponent /></v-col>
+        <v-col class="become-member-btns">
+          <v-btn class="become-member-btn" @click="openApplicationForm('pdf')"
+            >Application Form PDF</v-btn
+          >
+          <v-btn class="become-member-btn" @click="openApplicationForm('form')"
+            >Register Online Now!</v-btn
+          >
+        </v-col>
+      </v-row>
+    </div>
+
+    <v-divider
+      :thickness="4"
+      color="#3AB54A"
+      class="mx-12 border-opacity-100 my-5"
+    ></v-divider>
+
     <!-- Founding Members Section -->
     <div id="founding-members" class="subsection">
       <span class="subtitle">
@@ -36,6 +69,7 @@
           :title="card.name"
           :description="card.description"
           :contactPerson="card.contactPerson"
+          :uni-info="card"
           :circleColor="circleColors[index]"
         />
       </div>
@@ -65,7 +99,7 @@
         v-html="constants.partners.structureAndObjectivesDescription"
       />
       <span>
-        <PartnersNetwork class="mb-6" />
+        <PartnersNetwork class="mb-6 network-svg" />
       </span>
       <PdfViewerCard :pdfs="structureAndObjectivesPDFs" />
     </div>
@@ -104,6 +138,7 @@ import constants from "@/shared/constants";
 import PartnersNetwork from "@/components/PartnersNetwork.vue";
 import angie_bgless from "@/assets/images/angie_bgless.png";
 import PdfViewerCard from "@/components/PdfViewerCard.vue";
+import ApplicationFormComponent from "@/components/ApplicationFormComponent.vue";
 import {
   structureAndObjectivesPDFs,
   addingNewMembersPDFs,
@@ -136,6 +171,14 @@ function copyLink(sectionId: string) {
       console.error("Could not copy link: ", err);
     });
 }
+
+const openApplicationForm = (type: string) => {
+  if (type === "pdf") {
+    window.open(constants.applicationFormPDF, "_blank");
+  } else {
+    window.open(constants.applicationFormLink, "_blank");
+  }
+};
 </script>
 
 <style scoped>
@@ -213,5 +256,24 @@ function copyLink(sectionId: string) {
   .link-icon {
     text-decoration: none;
   }
+
+  .become-member-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .become-member-btn {
+      margin: 1rem;
+      font-size: 20px;
+      font-weight: 800;
+      color: white;
+      background-color: #3ab54a;
+      text-transform: none;
+    }
+  }
+}
+
+.network-svg {
+  /* margin-left: -calc(100% - 100vw); */
 }
 </style>
