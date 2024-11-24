@@ -10,7 +10,7 @@
         <br />
         <span>
           Fill the Application Form and send it by email to one of the Founding
-          Members.
+          Members, or complete the registration online.
         </span>
         <br />
         <br />
