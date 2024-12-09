@@ -105,7 +105,7 @@ const constants = {
     },
     {
       id: 7,
-      name: "FH OO Studienbetriebs",
+      name: "University of Applied Sciences Upper Austria",
       photo: require("@/assets/images/partners/fhoo.png"),
       url: "https://www.fh-ooe.at/en/",
       description: `<p>Being one of the strongest Universities of Applied Sciences in terms of research in the German-speaking area, the University of Applied Sciences Upper Austria (FH OOE) offers 68 internationally recognized academic degree programmes.</p>
