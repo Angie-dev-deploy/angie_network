@@ -35,14 +35,15 @@ body {
     font-size: 1.5rem !important;
     font-weight: 800 !important;
     color: white;
-    -webkit-text-stroke: 1px black;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
   }
 
   &--button {
     font-size: 1.5rem !important;
     font-weight: 800 !important;
     color: white;
-    -webkit-text-stroke: 1px black;
+      text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+
   }
 
   &--dropdown {
@@ -50,7 +51,8 @@ body {
       font-size: 1.5rem !important;
       font-weight: 800 !important;
       color: white;
-      -webkit-text-stroke: 1px black;
+        text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+
       padding: 0 !important;
       height: 36px !important;
       min-height: 0px !important;
@@ -89,7 +91,8 @@ body {
     .menu-button--text {
       font-weight: 800;
       font-size: 1.5rem;
-      -webkit-text-stroke: 1px black;
+        text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+
     }
 
     .v-row {
@@ -104,7 +107,8 @@ body {
         font-size: 1.5rem !important;
         font-weight: 800 !important;
         color: white;
-        -webkit-text-stroke: 1px black;
+          text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+
         padding: 0 !important;
         height: 36px !important;
         min-height: 0px !important;
@@ -143,7 +147,8 @@ body {
       .menu-button--text {
         font-weight: 800;
         font-size: 1.5rem;
-        -webkit-text-stroke: 1px black;
+          text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+
       }
 
       .v-row {
@@ -156,7 +161,8 @@ body {
     .v-list-item {
       &__content {
         text-align: center;
-        -webkit-text-stroke: 1px black;
+          text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+
         font-size: 1.5rem !important;
         font-weight: 800 !important;
         color: white;
@@ -167,7 +173,8 @@ body {
 
 .menu-button {
   color: white;
-  -webkit-text-stroke: 1px black;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+
 }
 
 .menu-button--text {
@@ -175,7 +182,8 @@ body {
     font-size: 1.5rem !important;
     font-weight: 800 !important;
     color: white;
-    -webkit-text-stroke: 1px black;
+      text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+
   }
 }
 

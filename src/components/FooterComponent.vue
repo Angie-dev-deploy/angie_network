@@ -144,7 +144,8 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
 
 .footer__container-element h3 {
   color: #e2dcde;
-  -webkit-text-stroke: 0.5px black;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black,
+    1px -1px 0 black;
   font-size: 45px;
   font-style: normal;
   font-weight: 600;
@@ -154,7 +155,8 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
 
 .footer__container-element p {
   color: #e2dcde;
-  -webkit-text-stroke: 0.5px black;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black,
+    1px -1px 0 black;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -171,7 +173,6 @@ import angie_logo from "@/assets/images/footer/angie_logo.png";
   justify-content: space-evenly;
   font-size: 25px;
   color: #e2dcde;
-  // -webkit-text-stroke: 0.5px black;
 }
 
 a {
