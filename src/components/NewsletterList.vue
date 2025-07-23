@@ -43,6 +43,10 @@ export default {
           title: "Newsletter 2",
           pdfUrl: "/pdfs/newsletters/ANGIE-Newsletter 2.pdf",
         },
+        {
+          title: "Newsletter 3",
+          pdfUrl: "/pdfs/newsletters/ANGIE-Newsletter 3.pdf",
+        },
       ],
     };
   },
