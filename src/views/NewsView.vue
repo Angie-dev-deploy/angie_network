@@ -11,6 +11,13 @@
       color="#3AB54A"
       class="mx-12 border-opacity-100 my-12"
     ></v-divider>
+    <h1 class="title">Download our newsletters here</h1>
+    <NewsletterList />
+    <v-divider
+      :thickness="4"
+      color="#3AB54A"
+      class="mx-12 border-opacity-100 my-12"
+    ></v-divider>
     <div class="news-card">
       <div class="news-container">
         <div class="news-container_groupB">
@@ -31,6 +38,7 @@
 
 <script setup lang="ts">
 import NewsCard from "@/components/NewsCard.vue";
+import NewsletterList from "@/components/NewsletterList.vue";
 import news from "@/shared/news";
 import MdiNewspaperIcon from "@/assets/icons/MdiNewspaperIcon.vue";
 import { useRouter } from "vue-router";
