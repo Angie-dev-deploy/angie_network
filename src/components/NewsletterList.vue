@@ -17,10 +17,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              View PDF
-            </a>
-            <a class="newsletter-button" :href="newsletter.pdfUrl" download>
-              Download PDF
+              View/Download PDF
             </a>
           </div>
         </v-expansion-panel-text>
