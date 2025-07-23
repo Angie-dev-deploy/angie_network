@@ -71,14 +71,106 @@ const news: any = [
     closely cooperates with practices and companies that are among the largest
     and best in the field of water transport.</p>`,
   },
-].sort((a: any, b: any) => {
-  if (a.date < b.date) {
-    return -1;
-  } else if (a.date > b.date) {
-    return 1;
-  } else {
-    return 0;
-  }
-});
+  {
+    index: 2,
+    title:
+      'Graduate Study Program (GSP) "Transition to Green for Sustainable Society."',
+    photo: require("../../public/images/newsImages/news3/newsletter2_img1.png"),
+    photo_2: require("../../public/images/newsImages/news3/newsletter2_img2.png"),
+    date: "12 December 2024",
+    text: `
+    <b>Curriculum Development</b> <br/><br/>
+    <p>19 disciplines were selected through a collaborative process involving all partner institutions, ensuring relevance to regional and global sustainability challenges. These disciplines cover interdisciplinary topics across the seven domains critical for sustainability, namely:</p>
+    <ul>
+      <li>Construction</li>
+      <li>Industrial Activities</li>
+      <li>Transportation</li>
+      <li>Waste</li>
+      <li>Energy Production</li>
+      <li>Residential Activities</li>
+      <li>Agriculture</li>
+    </ul>
+    <br/>
+    <p>Transversal themes such as European Environmental Law, Digitalization, and Soft Skills for ”Green Transition” were also highlighted.</p>
+    `,
+    text_2: `
+    <b>Competencies and Learning Outcomes:</b> <br/><br/>
+    <p>Competencies and Learning Outcomes were defined for each discipline, and divided into:</p>
+    <ul>
+      <li>
+        <strong>Technical skills:</strong> such as Life Cycle Assessment (LCA), circular economy strategies, and renewable energy integration.
+      </li>
+      <li>
+        <strong>Soft skills:</strong> such as Ethical decision-making, stakeholder communication, and interdisciplinary collaboration.
+      </li>
+    </ul>
+    <br/>
+    <br/>
 
+    <b>Main Structure of the New GSP:</b> <br/><br/>
+    <ul>
+      <li>
+        <strong>Innovative Pedagogy:</strong> Emphasis on active learning (PBL, EBL) and interdisciplinary approaches.
+      </li>
+      <li>
+        <strong>Practical Focus:</strong> Real-world applications through projects, case studies, and industry collaboration.
+      </li>
+      <li>
+        <strong>Tailored Communication:</strong> Methods adapted for trainers (teaching tools), specialists (technical depth), and authorities (policy frameworks).
+      </li>
+      <li>
+        <strong>Holistic Curriculum:</strong> Combines technical knowledge, soft skills, and sustainability practices.
+      </li>
+    </ul>
+    <br/>
+    <b>Together, we’re shaping the future of sustainable education!</b>
+    `,
+  },
+  {
+    index: 3,
+    title: "Upcoming Dissemination and Piloting Activities",
+    photo: require("../../public/images/newsImages/news4/newsletter3_img1.png"),
+    photo_2: require("../../public/images/newsImages/news4/newsletter3_img2.png"),
+    date: "26 May 2025",
+    text: `
+    <p>As the ANGIE project moves into its key dissemination phase, we are glad to share with you the activities ahead. Over the next months, we will roll a series of dissemination and piloting activities to ensure that ANGIE’s messages, methods, and materials reach the target audience. Whether you are a student, faculty, professional, or policymaker, there is a place for you in our green transition conversations.</p>
+    <br/><br/>
+    <b>What We Aim to Achieve:</b> <br/><br/>
+    <ul>
+      <li>Foster a shift in awareness and behavior among stakeholders in the WATERIC sectors (Transportation, Energy Production, Agriculture, Waste Management, Construction, Industrial Activities, and Residential Activities) to address climate change. </li>
+      <li>Improve the knowledge and skills of the educators from WATERIC sector.</li>
+      <li>Improve the knowledge and skills of the specialists involved in the design and operation of systems acting in WATERIC sectors.</li>
+      <li>To test the ANGIE Graduate Study Program in pilot learning activities.</li>
+    </ul>
+    <br/>
+    `,
+    text_2: `
+
+    <b>Dissemination Activities at a Glance</b> <br/><br/>
+    <ul>
+      <li>Eight (8) National Workshops for female educators (at any level)</li>
+      <li>Eight (8) National Roundtables for stakeholders in the WATERIC sector.</li>
+      <li>Eight (8) National Seminars for educators and academics</li>
+      <li>Three (3) International Webinars for professionals, teachers, trainers, and stakeholders approaching green transition.</li>
+      <li> Three (3) International Blended Course Piloting on (I) Fabrication and Environment, (II) Logistics, Transportation and Environment, (III) Waste Management and Environment. The target group include students, teachers, trainers, and profession  als. </li>
+      <li>(1) Show Kit containing training materials</li>
+    </ul>
+    <br/>
+
+    <b>Participants will</b> <br/><br/>
+    <ul>
+      <li>Explore how different industrial sectors affect the environment and identify opportunities for sustainable change within (e.g. fabrication, transport, and waste).</li>
+      <li>Build alignment with green transition strategies</li>
+      <li>Gain awareness on climate change and green transition</li>
+      <li>Learn to apply green skills in real-world contexts (e.g. fabrication, waste, and logistics)</li>
+      <li>Gain pedagogical, communication, and assessment skills for teaching climate change and green transition.</li>
+      <li>Be exposed to best practices and case examples on green transition</li>
+      <li>Have access to a repository of ANGIE learning materials and contents related to climate change and green transition</li>
+    </ul>
+    <br/>
+    `,
+  },
+].sort((a: any, b: any) => {
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+});
 export default news;

@@ -129,7 +129,7 @@ watchEffect(() => {
   border-radius: 12px;
   transition: transform 0.3s ease;
   overflow: hidden; /* Ensure overflow is hidden */
-  margin-bottom: 2rem; /* Adjust margin as needed */
+  margin: 2rem; /* Adjust margin as needed */
   display: flex;
 
   &:hover {

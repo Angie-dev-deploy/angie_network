@@ -10,47 +10,27 @@
           {{ newsletter.title }}
         </v-expansion-panel-title>
         <v-expansion-panel-text>
-          <a
-            class="newsletter-download-link"
-            :href="newsletter.pdfUrl"
-            target="_blank"
-            download
-          >
-            Download PDF
-          </a>
-          <iframe
-            :src="newsletter.pdfUrl"
-            width="100%"
-            height="600px"
-            style="border: none; margin-top: 1rem"
-          ></iframe>
+          <div class="button-group">
+            <a
+              class="newsletter-button"
+              :href="newsletter.pdfUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View PDF
+            </a>
+            <a class="newsletter-button" :href="newsletter.pdfUrl" download>
+              Download PDF
+            </a>
+          </div>
         </v-expansion-panel-text>
       </v-expansion-panel>
     </v-expansion-panels>
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      newsletterList: [
-        {
-          title: "Newsletter 1",
-          pdfUrl: "/pdfs/newsletters/ANGIE-Newsletter 1.pdf",
-        },
-        {
-          title: "Newsletter 2",
-          pdfUrl: "/pdfs/newsletters/ANGIE-Newsletter 2.pdf",
-        },
-        {
-          title: "Newsletter 3",
-          pdfUrl: "/pdfs/newsletters/ANGIE-Newsletter 3.pdf",
-        },
-      ],
-    };
-  },
-};
+<script setup>
+import { newsletterList } from "@/shared/newsletters.ts";
 </script>
 
 <style lang="scss">
@@ -62,15 +42,22 @@ export default {
   margin-top: 16px;
 }
 
-.newsletter-download-link {
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.newsletter-button {
   display: inline-block;
-  margin-bottom: 16px;
   color: white;
   text-decoration: none;
+  font-size: 18px;
   font-weight: bold;
   background-color: #3ab54a;
   padding: 8px 16px;
   border-radius: 8px;
+  text-align: center;
   width: 100%;
 
   &:hover {
