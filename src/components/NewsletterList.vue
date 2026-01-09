@@ -16,6 +16,7 @@
               :href="newsletter.pdfUrl"
               target="_blank"
               rel="noopener noreferrer"
+              @click="handleNewsletterClick(newsletter.title)"
             >
               View/Download PDF
             </a>
@@ -26,8 +27,13 @@
   </div>
 </template>
 
-<script setup>
-import { newsletterList } from "@/shared/newsletters.ts";
+<script setup lang="ts">
+import { newsletterList } from "@/shared/newsletters";
+import { trackNewsletterClick } from "@/shared/newsletterTracking";
+
+const handleNewsletterClick = async (newsletterTitle: string) => {
+  await trackNewsletterClick(newsletterTitle);
+};
 </script>
 
 <style lang="scss">
