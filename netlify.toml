@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Configure secrets scanning to ignore Supabase keys
+# These are safe to expose - the anon key is designed for client-side use
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "VUE_APP_SUPABASE_URL,VUE_APP_SUPABASE_KEY"
