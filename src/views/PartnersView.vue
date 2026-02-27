@@ -25,17 +25,17 @@
           <v-icon color="#3AB54A">mdi-link</v-icon>
         </button>
       </span>
-      <v-row>
-        <v-col> <ApplicationFormComponent /></v-col>
-        <v-col class="become-member-btns d-flex flex-column">
+      <div class="d-flex align-center w-100">
+        <div class="w-100 d-flex"><ApplicationFormComponent /></div>
+        <div class="become-member-btns w-100 d-flex flex-column justify-start">
           <v-btn class="become-member-btn" @click="openApplicationForm('pdf')"
             >Application Form PDF</v-btn
           >
           <v-btn class="become-member-btn" @click="openApplicationForm('form')"
             >Register Online Now!</v-btn
           >
-        </v-col>
-      </v-row>
+        </div>
+      </div>
     </div>
 
     <v-divider
@@ -224,7 +224,7 @@ const openApplicationForm = (type: string) => {
 .subsection {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: start;
   width: 100%;
   padding: 2rem 3rem;
 
