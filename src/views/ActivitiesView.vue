@@ -129,8 +129,8 @@ section {
     font-weight: 600;
     margin-bottom: 1rem;
     color: #fff;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: #006837;
+    text-shadow: -1px -1px 0 #006837, 1px -1px 0 #006837, -1px 1px 0 #006837,
+      1px 1px 0 #006837;
     margin: 0 0 0 1rem;
   }
   .bold {

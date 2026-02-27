@@ -27,7 +27,7 @@
       </span>
       <v-row>
         <v-col> <ApplicationFormComponent /></v-col>
-        <v-col class="become-member-btns">
+        <v-col class="become-member-btns d-flex flex-column">
           <v-btn class="become-member-btn" @click="openApplicationForm('pdf')"
             >Application Form PDF</v-btn
           >
@@ -258,7 +258,7 @@ const openApplicationForm = (type: string) => {
   }
 
   .become-member-btns {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
 
