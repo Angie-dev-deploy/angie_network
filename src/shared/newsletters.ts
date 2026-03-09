@@ -27,4 +27,12 @@ export const newsletterList: any = [
     title: "Newsletter 7",
     pdfUrl: "/pdfs/newsletters/ANGIE-Newsletter 7.pdf",
   },
+  {
+    title: "Newsletter 8",
+    pdfUrl: "/pdfs/newsletters/ANGIE-Newsletter 8.pdf",
+  },
+  {
+    title: "Newsletter 9",
+    pdfUrl: "/pdfs/newsletters/ANGIE-Newsletter 9.pdf",
+  },
 ];
