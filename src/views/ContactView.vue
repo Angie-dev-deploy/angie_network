@@ -70,7 +70,7 @@
 import WorldMap from "@/components/WorldMap.vue";
 import emailjs from "emailjs-com";
 import constants from "@/shared/constants";
-import angie_letter from "@/assets/images/letter.png";
+import angie_letter from "@/assets/images/regen/letter.png";
 
 import { ref, Ref } from "vue";
 

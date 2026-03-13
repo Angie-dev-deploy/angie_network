@@ -30,8 +30,8 @@ import BecomeAMemberSection from "@/components/BecomeAMemberSection.vue";
 import NewsSection from "@/components/NewsSection.vue";
 import AboutSection from "@/components/AboutSection.vue";
 import PhotoCarroussel from "../components/PhotoCarroussel.vue";
-import angiePhoto from "../assets/images/angie.png";
-import angieMobilePhoto from "../assets/images/angie_mobile.png";
+import angiePhoto from "../assets/images/regen/angie.png";
+import angieMobilePhoto from "../assets/images/regen/angie_mobile.png";
 import { ref } from "vue";
 import { watch } from "vue";
 

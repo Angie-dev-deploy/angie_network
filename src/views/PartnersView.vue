@@ -136,7 +136,7 @@
 import CardPartners from "@/components/CardPartners.vue";
 import constants from "@/shared/constants";
 import PartnersNetwork from "@/components/PartnersNetwork.vue";
-import angie_bgless from "@/assets/images/angie_bgless.png";
+import angie_bgless from "@/assets/images/regen/angie_bgless.png";
 import PdfViewerCard from "@/components/PdfViewerCard.vue";
 import ApplicationFormComponent from "@/components/ApplicationFormComponent.vue";
 import {
