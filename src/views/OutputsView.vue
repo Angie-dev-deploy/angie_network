@@ -13,12 +13,17 @@
     ></v-divider>
 
     <div class="mx-10">
-      <v-tabs v-model="activeTab" color="#3AB54A" class="mb-6">
-        <v-tab value="all">All</v-tab>
-        <v-tab value="pdf">PDFs</v-tab>
-        <v-tab value="video">Video</v-tab>
-        <v-tab value="image">Images</v-tab>
-      </v-tabs>
+      <v-chip-group
+        v-model="activeTab"
+        mandatory
+        selected-class="active-chip"
+        class="mb-6"
+      >
+        <v-chip value="all" variant="outlined" filter>All</v-chip>
+        <v-chip value="pdf" variant="outlined" filter>PDFs</v-chip>
+        <v-chip value="video" variant="outlined" filter>Video</v-chip>
+        <v-chip value="image" variant="outlined" filter>Images</v-chip>
+      </v-chip-group>
 
       <div v-for="section in outputSections" :key="section.key">
         <template v-if="sectionItems(section.key).length > 0">
@@ -64,13 +69,24 @@ const sectionItems = (sectionKey: string): MediaItem[] => {
 <style scoped>
 .media-list {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 
 .section-title {
   color: #3ab54a;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+:deep(.active-chip) {
+  background: #006837 !important;
+  color: #fff !important;
+  border-color: #006837 !important;
+}
+
+:deep(.v-chip--variant-outlined) {
+  border-color: #006837;
+  color: #006837;
 }
 </style>

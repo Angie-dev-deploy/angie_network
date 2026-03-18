@@ -13,12 +13,17 @@
     ></v-divider>
 
     <div class="mx-10">
-      <v-tabs v-model="activeTab" color="#3AB54A" class="mb-6">
-        <v-tab value="all">All</v-tab>
-        <v-tab value="pdf">PDFs</v-tab>
-        <v-tab value="video">Video</v-tab>
-        <v-tab value="audio">Audio</v-tab>
-      </v-tabs>
+      <v-chip-group
+        v-model="activeTab"
+        mandatory
+        selected-class="active-chip"
+        class="mb-6"
+      >
+        <v-chip value="all" variant="outlined" filter>All</v-chip>
+        <v-chip value="pdf" variant="outlined" filter>PDFs</v-chip>
+        <v-chip value="video" variant="outlined" filter>Video</v-chip>
+        <v-chip value="audio" variant="outlined" filter>Audio</v-chip>
+      </v-chip-group>
 
       <div class="media-list">
         <MediaCard
@@ -49,7 +54,18 @@ const filteredItems = (tab: string): MediaItem[] => {
 <style scoped>
 .media-list {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+:deep(.active-chip) {
+  background: #006837 !important;
+  color: #fff !important;
+  border-color: #006837 !important;
+}
+
+:deep(.v-chip--variant-outlined) {
+  border-color: #006837;
+  color: #006837;
 }
 </style>
