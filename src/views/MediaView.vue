@@ -11,27 +11,45 @@
       color="#3AB54A"
       class="mx-12 border-opacity-100 my-12"
     ></v-divider>
+
     <div class="mx-10">
-      <PdfViewerCard :pdfs="pdfs" />
+      <v-tabs v-model="activeTab" color="#3AB54A" class="mb-6">
+        <v-tab value="all">All</v-tab>
+        <v-tab value="pdf">PDFs</v-tab>
+        <v-tab value="video">Video</v-tab>
+        <v-tab value="audio">Audio</v-tab>
+      </v-tabs>
+
+      <div class="media-list">
+        <MediaCard
+          v-for="item in filteredItems(activeTab)"
+          :key="item.index"
+          :item="item"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { pdfs } from "@/shared/pdfs.ts";
-import PdfViewerCard from "@/components/PdfViewerCard.vue";
+import { ref } from "vue";
+import { mediaItems } from "@/shared/media";
+import type { MediaItem, MediaType } from "@/shared/media";
+import MediaCard from "@/components/MediaCard.vue";
+
+const tabs = ["all", "pdf", "video", "audio"] as const;
+const activeTab = ref("all");
+
+const filteredItems = (tab: string): MediaItem[] => {
+  if (tab === "all") return mediaItems;
+  return mediaItems.filter((item) => item.type === (tab as MediaType));
+};
 </script>
 
 <style scoped>
-.pdf-cards-container {
+.media-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  margin: 2rem;
-
-  .pdf-card {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
+  width: 100%;
 }
 </style>
