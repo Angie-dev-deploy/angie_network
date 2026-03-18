@@ -23,6 +23,20 @@
           Your browser does not support the audio tag.
         </audio>
       </div>
+
+      <!-- Image preview -->
+      <div v-if="item.type === 'image'" class="media-player mt-4">
+        <img
+          :src="item.src"
+          :alt="item.title"
+          style="
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 4px;
+          "
+        />
+      </div>
     </v-card-text>
     <v-card-actions>
       <v-btn v-if="item.type === 'pdf'" @click="openMedia"

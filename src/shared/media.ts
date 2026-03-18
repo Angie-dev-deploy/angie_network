@@ -6,6 +6,7 @@ export interface MediaItem {
   description: string;
   src: string;
   type: MediaType;
+  section?: string;
 }
 
 export const mediaItems: MediaItem[] = [

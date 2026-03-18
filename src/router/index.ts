@@ -54,7 +54,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/outputs",
     name: "outputs",
-    component: UnderConstructionView,
+    component: () => import("../views/OutputsView.vue"),
   },
 ];
 
