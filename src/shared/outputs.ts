@@ -127,7 +127,7 @@ export const outputItems: MediaItem[] = [
   },
   {
     index: 14,
-    title: "Dissemination Product 1",
+    title: "Dissemination Product - Playing Cards",
     description: "Dissemination product image",
     src: "/outputs/dissemination/diss_prod1.webp",
     type: "image",
@@ -135,7 +135,7 @@ export const outputItems: MediaItem[] = [
   },
   {
     index: 15,
-    title: "Dissemination Product 2",
+    title: "Dissemination Product - Playing Cards",
     description: "Dissemination product image",
     src: "/outputs/dissemination/diss_prod2.webp",
     type: "image",
@@ -143,7 +143,7 @@ export const outputItems: MediaItem[] = [
   },
   {
     index: 16,
-    title: "Dissemination Product 3",
+    title: "Dissemination Product - Pen and Pencil",
     description: "Dissemination product image",
     src: "/outputs/dissemination/diss_prod3.webp",
     type: "image",
@@ -151,7 +151,7 @@ export const outputItems: MediaItem[] = [
   },
   {
     index: 17,
-    title: "Dissemination Product 4",
+    title: "Dissemination Product - Bottle",
     description: "Dissemination product image",
     src: "/outputs/dissemination/diss_prod4.webp",
     type: "image",
@@ -159,7 +159,7 @@ export const outputItems: MediaItem[] = [
   },
   {
     index: 18,
-    title: "Dissemination Product 5",
+    title: "Dissemination Product - USB Drive",
     description: "Dissemination product image",
     src: "/outputs/dissemination/diss_prod5.webp",
     type: "image",
@@ -167,7 +167,7 @@ export const outputItems: MediaItem[] = [
   },
   {
     index: 19,
-    title: "Dissemination Product 6",
+    title: "Dissemination Product - Folder",
     description: "Dissemination product image",
     src: "/outputs/dissemination/diss_prod6.webp",
     type: "image",
@@ -175,7 +175,7 @@ export const outputItems: MediaItem[] = [
   },
   {
     index: 20,
-    title: "Dissemination Product 7",
+    title: "Dissemination Product - Keychain",
     description: "Dissemination product image",
     src: "/outputs/dissemination/diss_prod7.webp",
     type: "image",
@@ -183,7 +183,7 @@ export const outputItems: MediaItem[] = [
   },
   {
     index: 21,
-    title: "Dissemination Product 8",
+    title: "Dissemination Product - Tote Bag",
     description: "Dissemination product image",
     src: "/outputs/dissemination/diss_prod8.webp",
     type: "image",
