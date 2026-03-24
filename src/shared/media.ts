@@ -83,7 +83,7 @@ export const mediaItems: MediaItem[] = [
     index: 9,
     title: "TV Release",
     description: "ANGIE Network television release",
-    src: "/media/TV release.mp4",
+    src: "/media/TV_release.mp4",
     type: "video",
   },
   // Audio
